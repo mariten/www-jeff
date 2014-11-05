@@ -151,18 +151,9 @@
 
         #logo h1
         {
-            float: left;
-            margin: 0 0.35em 0 0;
-            padding: 0.25em 0.2em 0.25em 0.2em;
-            font-size: 3.25em;
-            letter-spacing: 0.05em;
-        }
-
-        #logo span
-        {
+            margin-left: 10px;
             line-height: 4.5em;
             letter-spacing: 0.025em;
-            font-size: 0.9em;
         }
 
 /*********************************************************************************/

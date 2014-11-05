@@ -622,17 +622,19 @@
         overflow: hidden;
     }
 
+        #logo img
+        {
+            width: 64px;
+            height: 64px;
+            vertical-align: middle;
+        }
+
         #logo h1
         {
-            background: #ff4486;
-            color: #fff;
-            border-radius: 6px;
-            font-family: 'Oleo Script', serif;
-            font-weight: 400;
-        }
-        
-        #logo span
-        {
+            margin: 0;
+            padding: 0;
+            display: inline;
+            font-size: 0.9em;
             font-weight: 800;
         }
     
