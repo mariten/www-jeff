@@ -514,6 +514,48 @@
 /* Widgets                                                                       */
 /*********************************************************************************/
 
+    ul.divided
+    {
+    }
+
+        ul.divided li
+        {
+            border-top: solid 1px #d2d7dc;
+            padding-top: 1em;
+            margin-top: 1em;
+        }
+
+        ul.divided li:first-child
+        {
+            padding-top: 0;
+            margin-top: 0;
+            border-top: 0;
+        }
+
+    ul.web-icons
+    {
+    }
+
+        ul.web-icons li
+        {
+            padding-top: 0.75em;
+            margin-top: 0.75em;
+        }
+
+        ul.web-icons li:before
+        {
+            display: inline-block;
+            color: #fff;
+            background: #61666b;
+            width: 1.5em;
+            height: 1.5em;
+            border-radius: 0.35em;
+            text-align: center;
+            line-height: 1.5em;
+            font-size: 1.75em;
+            margin-right: 0.75em;
+        }
+
     .widget
     {
     }
