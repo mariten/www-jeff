@@ -1,0 +1,4 @@
+DirectoryIndex index.php index.html
+
+RewriteEngine On
+RewriteRule ^([a-zA-Z0-9]+)([/a-zA-Z0-9]*)?$ index.php?url_path=$1$2 [L]
