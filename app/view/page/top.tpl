@@ -3,8 +3,7 @@
     <head>
         <title>About Jeff Case</title>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <meta name="description" content="" />
-        <meta name="keywords" content="" />
+        <meta name="description" content="Personal Website for Jeff Case - Developer, Photographer, and Translator" />
         <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
         <script src="js/jquery.min.js"></script>
         <script src="js/jquery.dropotron.min.js"></script>
@@ -49,13 +48,13 @@
                 <div class="row">
                     <div class="7u">
                         <h2>Jeff Case</h2>
-                        <p>Developer, engineer, photographer, tinkerer, and all-purpose maker of things</p>
+                        <p>Developer, photographer, tinkerer, translator, explorer, and lover of creating things</p>
                     </div>
                     <div class="5u">
                         <ul>
                             <li><a href="#" class="button big icon fa-arrow-circle-right">Development</a></li>
                             <li><a href="#" class="button big icon fa-arrow-circle-right">Photography</a></li>
-                            <li><a href="#" class="button big alt">Resume</a></li>
+                            <li><a href="#" class="button big icon fa-arrow-circle-right">Translation</a></li>
                         </ul>
                     </div>
                 </div>
@@ -135,7 +134,8 @@
                     <div class="12u">
                         <div id="copyright">
                             <ul class="menu">
-                                <li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                                <li>&copy; Jeff Case. All rights reserved</li>
+                                <li>Original Design: <a href="http://html5up.net/verti">Verti</a> by <a href="http://html5up.net">HTML5 UP</a></li>
                             </ul>
                         </div>
                     </div>
