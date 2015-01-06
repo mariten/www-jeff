@@ -12,17 +12,8 @@ class ParamManager
     function __construct()
     {
         // Record all params from GET/POST requests in parameter store array
-        $is_magic_quotes_enabled = get_magic_quotes_gpc();
         foreach($_REQUEST as $param_key => $param_value) {
-            if($is_magic_quotes_enabled) {
-                if(is_array($param_value)) {
-                    $this->all_params[stripslashes($param_key)] = $param_value;
-                } else {
-                    $this->all_params[stripslashes($param_key)] = stripslashes($param_value);
-                }
-            } else {
-                $this->all_params[$param_key] = $param_value;
-            }
+            $this->all_params[$param_key] = $param_value;
         }
     }
 
