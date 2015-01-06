@@ -87,19 +87,15 @@
 
                         <!-- Content -->
                         <div id="content">
-                            <section>
-                                <h2>So what's this all about?</h2>
-                                <p>This is <strong>Verti</strong>, a free and fully responsive HTML5 site template by <a href="http://html5up.net">HTML5 UP</a>.
-                                Verti is released under the <a href="http://html5up.net/license">Creative Commons Attribution license</a>, so feel free to use it for any personal or commercial project you might have going on (just don't forget to credit us for the design!)</p>
-                                <p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus. Praesent semper bibendum ipsum, et tristique augue fringilla eu. Vivamus id risus vel dolor auctor euismod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat. Aliquam luctus mattis lectus sit amet phasellus quam turpis.</p>
-                            </section>
-
                             <section class="last">
                                 <h2>About Me</h2>
-                                <p>This is <strong>Verti</strong>, a free and fully responsive HTML5 site template by <a href="http://html5up.net">HTML5 UP</a>.
-                                Verti is released under the <a href="http://html5up.net/license">Creative Commons Attribution license</a>, so feel free to use it for any personal or commercial project you might have going on (just don't forget to credit us for the design!)</p>
-                                <p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus. Praesent semper bibendum ipsum, et tristique augue fringilla eu. Vivamus id risus vel dolor auctor euismod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat. Aliquam luctus mattis lectus sit amet phasellus quam turpis.</p>
-                                <a href="#" class="button icon fa-arrow-circle-right">Continue Reading</a>
+
+                                <p>Hi and thanks for visiting!  I am a software engineer living and working in Tokyo, originally from Dayton, Ohio.  I graduated from Kent State University in 2006 with a degree in Computer Science and have been living in Japan ever since, first in Mie Prefecture (home to Ise Grand Shrine!) and later in central Tokyo.  During my years in Mie I learned Japanese on my own over the years and, bit-by-bit, achieved full professional fluency.</p>
+
+                                <p>Throughout my life I have developed numerous pieces of software and websites, some entirely from scratch, and in recent years have worked for two major Japanese web services that have millions of daily users.  For these large-scale services I have primarily worked with search, rankings, recommendations, data visualization, and other data-handling centric functionality.</p>
+
+                                <p>When not programming, I may be found eating tasty food or exploring - either in a video game or in the real world.  I love maps and enjoy traveling around Japan with my wife while taking pictures of the abundant modern environments, traditional heritage, natural beauty, and good food available here.  A small selection of these photos are available for sale on Getty and a few are even used by the Yahoo! Weather app.</p>
+
                             </section>
                         </div>
 
