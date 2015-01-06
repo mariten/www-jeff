@@ -1,11 +1,12 @@
 <?php
 // Global Includes
 require_once SMARTY_DIR . 'Smarty.class.php';
+require_once JEFF_BASE_DIR . 'app/model/PersonalWebLinks.php';
 
 class Controller
 {
     protected $req_params = array();
-    protected $smarty = array();
+    protected $smarty = null;
 
 
     //{{{ init()
@@ -24,6 +25,15 @@ class Controller
     {
         $this->req_params = $param_manager;
         return array();
+    }
+    //}}}
+
+
+    //{{{ assignPersonalWebLinks()
+    protected function assignPersonalWebLinks()
+    {
+        $personal_web_links = PersonalWebLinks::getAsArray();
+        $this->smarty->assign('personal_web_links', $personal_web_links);
     }
     //}}}
 }

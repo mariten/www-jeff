@@ -73,11 +73,9 @@
                             <section>
                                 <h3>Around the Web</h3>
                                 <ul class="web-icons">
-                                    <li class="icon fa-linkedin"><a href="#">LinkedIn</a></li>
-                                    <li class="icon fa-github"><a href="#">GitHub</a></li>
-                                    <li class="icon fa-flickr"><a href="#">Flickr</a></li>
-                                    <li class="icon fa-stack-overflow"><a href="#">Stack Overflow</a></li>
-                                    <li class="icon fa-stack-exchange"><a href="#">Stack Travel</a></li>
+    {foreach from=$personal_web_links item=web_link}
+                                    <li class="icon {$web_link.glyph}"><a href="{$web_link.url}">{$web_link.display}</a></li>
+    {/foreach}
                                 </ul>
                             </section>
                         </div>
@@ -114,11 +112,9 @@
                         <section class="widget contact last">
                             <h3>Get In Touch</h3>
                             <ul>
-                                <li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                                <li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
-                                <li><a href="#" class="icon fa-flickr"><span class="label">Flickr</span></a></li>
-                                <li><a href="#" class="icon fa-stack-overflow"><span class="label">Stack Overflow</span></a></li>
-                                <li><a href="#" class="icon fa-stack-exchange"><span class="label">Stack Travel</span></a></li>
+    {foreach from=$personal_web_links item=web_link}
+                                <li><a href="{$web_link.url}" class="icon {$web_link.glyph}"><span class="label">{$web_link.display}</span></a></li>
+    {/foreach}
                             </ul>
                         </section>
                     
