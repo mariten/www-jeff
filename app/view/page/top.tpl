@@ -32,10 +32,11 @@
                 <!-- Nav -->
                 <nav id="nav">
                     <ul>
-                        <li class="current"><a href="index.html">Welcome</a></li>
-                        <li><a href="left-sidebar.html">Left Sidebar</a></li>
-                        <li><a href="right-sidebar.html">Right Sidebar</a></li>
-                        <li><a href="no-sidebar.html">No Sidebar</a></li>
+                        <li class="current"><a href="/">About Me</a></li>
+                        <li><a href="#">Development</a></li>
+                        <li><a href="#">Photography</a></li>
+                        <li><a href="#">Translation</a></li>
+                        <li><a href="#">Get In Touch</a></li>
                     </ul>
                 </nav>
                 
@@ -111,11 +112,11 @@
         <div id="footer-wrapper">
             <footer id="footer" class="container">
                 <div class="row">
-                    <div class="3u">
+                    <div class="12u">
                     
                         <!-- Contact -->
                         <section class="widget contact last">
-                            <h3>Contact Us</h3>
+                            <h3>Get In Touch</h3>
                             <ul>
                                 <li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
                                 <li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
@@ -123,9 +124,6 @@
                                 <li><a href="#" class="icon fa-stack-overflow"><span class="label">Stack Overflow</span></a></li>
                                 <li><a href="#" class="icon fa-stack-exchange"><span class="label">Stack Travel</span></a></li>
                             </ul>
-                            <p>1234 Fictional Road<br />
-                            Nashville, TN 00000<br />
-                            (800) 555-0000</p>
                         </section>
                     
                     </div>
