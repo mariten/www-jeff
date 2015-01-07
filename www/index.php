@@ -41,6 +41,6 @@ default:
 }
 
 // Execute action
-$action->init();
+$action->init($url_path);
 $action->checkParams($param_manager);
 $action->perform();

@@ -4,28 +4,7 @@
 {include file='inc/html/body.tpl' opening=true}
 
 <!-- Header -->
-<div id="header-wrapper">
-    <header id="header" class="container">
-    
-        <!-- Logo -->
-        <div id="logo">
-            <img src="images/jeff64face.png" alt="[My Avatar]" width="64" height="64" />
-            <h1>About Jeff Case</h1>
-        </div>
-        
-        <!-- Nav -->
-        <nav id="nav">
-            <ul>
-                <li class="current"><a href="/">About Me</a></li>
-                <li><a href="#">Development</a></li>
-                <li><a href="#">Photography</a></li>
-                <li><a href="#">Translation</a></li>
-                <li><a href="#">Get In Touch</a></li>
-            </ul>
-        </nav>
-        
-    </header>
-</div>
+{include file='inc/parts/page_header.tpl'}
 
 <!-- Banner -->
 <div id="banner-wrapper">
