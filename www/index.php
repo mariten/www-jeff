@@ -22,9 +22,8 @@ case '':
     break;
 
 case 'development':
-    // Page about development
-    echo('Development page');
-    exit;
+    require_once JEFF_BASE_DIR . 'app/controller/page/Development.php';
+    $action = new Page_Development();
     break;
 
 case 'resume':

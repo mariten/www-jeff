@@ -16,7 +16,7 @@
             </div>
             <div class="5u">
                 <ul>
-                    <li><a href="#" class="button big icon fa-arrow-circle-right">Development</a></li>
+                    <li><a href="/development" class="button big icon fa-arrow-circle-right">Development</a></li>
                     <li><a href="#" class="button big icon fa-arrow-circle-right">Photography</a></li>
                     <li><a href="#" class="button big icon fa-arrow-circle-right">Translation</a></li>
                 </ul>
