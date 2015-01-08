@@ -280,7 +280,7 @@
 
     #footer-wrapper
     {
-        padding: 40px 30px 40px 30px;
+        padding: 20px 30px 20px 30px;
     }
 
 /*********************************************************************************/
@@ -389,7 +389,7 @@
 
     #copyright
     {
-        padding: 2em 0 0 0;
+        padding: 1em 0 0 0;
         border-top: solid 1px #ccc;
-        margin: 4em 0 0 0;
+        margin: 2em 0 0 0;
     }
