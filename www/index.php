@@ -26,6 +26,11 @@ case 'development':
     $action = new Page_Development();
     break;
 
+case 'photography':
+    require_once JEFF_BASE_DIR . 'app/controller/page/Photography.php';
+    $action = new Page_Photography();
+    break;
+
 case 'resume':
     // Resume top page
     echo('resume');
