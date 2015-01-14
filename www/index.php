@@ -31,6 +31,11 @@ case 'photography':
     $action = new Page_Photography();
     break;
 
+case 'translation':
+    require_once JEFF_BASE_DIR . 'app/controller/page/Translation.php';
+    $action = new Page_Translation();
+    break;
+
 case 'resume':
     // Resume top page
     echo('resume');
