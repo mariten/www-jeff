@@ -20,6 +20,10 @@ class Controller
 
         // Record URL path for this request in template
         $this->smarty->assign('request_path', '/' . $url_path);
+
+        // Assign data used by all pages
+        $this->assignNavbarLinks();
+        $this->assignPersonalWebLinks();
     }
     //}}}
 
