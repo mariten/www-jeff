@@ -36,6 +36,11 @@ case 'translation':
     $action = new Page_Translation();
     break;
 
+case 'contact':
+    require_once JEFF_BASE_DIR . 'app/controller/page/Contact.php';
+    $action = new Page_Contact();
+    break;
+
 case 'resume':
     // Resume top page
     echo('resume');
