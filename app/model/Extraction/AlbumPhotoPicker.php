@@ -13,6 +13,8 @@ class Extraction_AlbumPhotoPicker
     /** Locally stored results from Flickr API */
     protected $photos_by_album = array();
 
+    /** Keep track of which prefectures selected photos were taken in */
+    protected $already_used_prefectures = array();
 
     public function __construct()
     {
@@ -139,6 +141,15 @@ class Extraction_AlbumPhotoPicker
         $all_tags = explode(' ', $photo_from_flickr['tags']);
         foreach($all_tags as $photo_tag) {
             if(Registry_FlickrMariten::isPrefectureTag($photo_tag)) {
+
+                if(isset($this->already_used_prefectures[$photo_tag])) {
+                    // Multiple photos from same prefecture cannot be displayed
+                    return null;
+                } else {
+                    // Record this prefecture as no longer available
+                    $this->already_used_prefectures[$photo_tag] = true;
+                }
+
                 $photo_data['prefecture'] = Registry_FlickrMariten::getPrefectureDisplay($photo_tag);
                 $photo_data['tag_url'] = $url_base . 'tags/' . urlencode($photo_tag) . '/';
                 break;
