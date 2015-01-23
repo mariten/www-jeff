@@ -109,11 +109,19 @@ class Extraction_AlbumPhotoPicker
             'photo_url'     => $url_base . $photo_from_flickr['id'] . '/',
             'title'         => $photo_from_flickr['title'],
             'img_url'       => $photo_from_flickr['url_m'],
+            'width'         => $photo_from_flickr['width_m'],
+            'height'        => $photo_from_flickr['height_m'],
             'album_display' => $this->available_albums[$album_key]['display'],
             'album_url'     => $url_base . 'sets/' . $this->available_albums[$album_key]['id'] . '/',
             'tag_url'       => '',
             'prefecture'    => '',
         );
+
+        // Only use 4x3 landscape photos
+        if($photo_data['width']  != API_Flickr::LANDSCAPE_MED_WIDTH
+        || $photo_data['height'] != API_Flickr::LANDSCAPE_MED_HEIGHT) {
+            return null;
+        }
 
         // Prettify title
         $photo_data['title'] = Registry_FlickrMariten::removeTitlePrefix($photo_from_flickr['title']);

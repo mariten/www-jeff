@@ -7,6 +7,9 @@ class API_Flickr
     const FLICKR_API_URL        = 'https://api.flickr.com/services/rest/';
     const FLICKR_PUBLIC_PHOTOS  = 1;
 
+    const LANDSCAPE_MED_WIDTH   = 500;
+    const LANDSCAPE_MED_HEIGHT  = 375;
+
     /** Object use to asynchronously call CURL */
     protected $curl;
 
