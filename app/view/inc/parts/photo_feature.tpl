@@ -14,10 +14,11 @@
                         </header>
                         <p>
         {if $picked_photo.prefecture}
-                            <a href="{$picked_photo.tag_url}">Taken in {$picked_photo.prefecture} Prefecture</a>
+                            <a href="{$picked_photo.tag_url}">Taken in {$picked_photo.prefecture} Prefecture</a><br />
         {/if}
+                            on {$picked_photo.date_taken}
         {if $picked_photo.geo_url}
-                            &nbsp;&nbsp;(<a href="{$picked_photo.geo_url}">map</a>)
+                            &nbsp;&nbsp;(<a href="{$picked_photo.geo_url}">see location on map</a>)
         {/if}
                         </p>
                     </div>

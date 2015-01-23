@@ -111,6 +111,8 @@ class Extraction_AlbumPhotoPicker
             'img_url'       => $photo_from_flickr['url_m'],
             'width'         => $photo_from_flickr['width_m'],
             'height'        => $photo_from_flickr['height_m'],
+            'date_raw'      => $photo_from_flickr['datetaken'],
+            'date_taken'    => date('M d, Y', strtotime($photo_from_flickr['datetaken'])),
             'album_display' => $this->available_albums[$album_key]['display'],
             'album_url'     => $url_base . 'sets/' . $this->available_albums[$album_key]['id'] . '/',
             'geo_url'       => '',
