@@ -100,4 +100,25 @@ class Registry_FlickrMariten
         }
     }
     //}}}
+
+
+    //{{{ removeTitlePrefix(string)
+    /**
+      * I prefix all photos with the sequential number of the photo (based on its camera)
+      * There is always a space between this number and the actual photo title
+      * For display on website, it is cleaner without this prefix
+      *
+      * @param  string   Flickr photo title from Mariten's collection
+      * @return string   Photo title with prefix removed
+      */
+    public static function removeTitlePrefix($photo_title)
+    {
+        $first_space = mb_strpos($photo_title, ' ');
+        if($first_space !== false) {
+            return mb_substr($photo_title, $first_space + 1);
+        } else {
+            return $photo_title;
+        }
+    }
+    //}}}
 }
