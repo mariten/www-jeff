@@ -23,6 +23,21 @@ class Registry_FlickrMariten
             'id'        => '72157622463615233',
             'display'   => 'Natural Japan',
         ),
+
+        'japan_at_night' => array(
+            'id'        => '72157625499254484',
+            'display'   => 'Japan at Night',
+        ),
+
+        'food_in_japan' => array(
+            'id'        => '72157623460798501',
+            'display'   => 'Food in Japan',
+        ),
+
+        'animals_in_japan' => array(
+            'id'        => '72157644976488162',
+            'display'   => 'Animals in Japan',
+        ),
     );
     //}}}
     //{{{ getAlbums()

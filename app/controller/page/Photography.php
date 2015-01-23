@@ -11,6 +11,9 @@ class Page_Photography extends Controller
             'olden_japan',
             'modern_japan',
             'natural_japan',
+            'japan_at_night',
+            'food_in_japan',
+            'animals_in_japan',
         );
 
         $photo_picker = new Extraction_AlbumPhotoPicker();
