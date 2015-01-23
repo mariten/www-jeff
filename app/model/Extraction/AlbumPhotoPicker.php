@@ -113,6 +113,7 @@ class Extraction_AlbumPhotoPicker
             'height'        => $photo_from_flickr['height_m'],
             'album_display' => $this->available_albums[$album_key]['display'],
             'album_url'     => $url_base . 'sets/' . $this->available_albums[$album_key]['id'] . '/',
+            'geo_url'       => '',
             'tag_url'       => '',
             'prefecture'    => '',
         );
@@ -121,6 +122,12 @@ class Extraction_AlbumPhotoPicker
         if($photo_data['width']  != API_Flickr::LANDSCAPE_MED_WIDTH
         || $photo_data['height'] != API_Flickr::LANDSCAPE_MED_HEIGHT) {
             return null;
+        }
+
+        // Check if photo is geotagged
+        if(isset($photo_from_flickr['geo_is_public'])
+        && $photo_from_flickr['geo_is_public'] == 1) {
+            $photo_data['geo_url'] = Registry_FlickrMariten::MAP_URL . $photo_data['id'];
         }
 
         // Prettify title

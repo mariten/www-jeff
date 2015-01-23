@@ -12,11 +12,14 @@
                             <h2><a href="{$picked_photo.photo_url}" style="color:#444;">{$picked_photo.title}</a></h2>
                             <p>From album <a href="{$picked_photo.album_url}">{$picked_photo.album_display}</a></p>
                         </header>
-        {if $picked_photo.prefecture}
                         <p>
+        {if $picked_photo.prefecture}
                             <a href="{$picked_photo.tag_url}">Taken in {$picked_photo.prefecture} Prefecture</a>
-                        </p>
         {/if}
+        {if $picked_photo.geo_url}
+                            &nbsp;&nbsp;(<a href="{$picked_photo.geo_url}">map</a>)
+        {/if}
+                        </p>
                     </div>
                 </section>
             </div>
