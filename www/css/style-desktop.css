@@ -70,9 +70,14 @@
                 
                 .box.feature .inner
                 {
-                    padding: 4em 2em 3em 2em;
+                    padding: 1.5em 1.5em 1.5em 1.5em;
                 }
-                
+
+                .box.feature header
+                {
+                    margin: 0 0 0.9em;
+                }
+
                 .box.feature h2
                 {
                     font-size: 1.35em;
@@ -81,6 +86,7 @@
                 .box.feature p
                 {
                     margin: 0;
+                    line-height: 1.5em;
                 }
 
                 .box.feature .image

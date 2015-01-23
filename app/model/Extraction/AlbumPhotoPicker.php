@@ -30,9 +30,9 @@ class Extraction_AlbumPhotoPicker
     public function populatePhotosetLists($target_photosets)
     {
         $photosets_to_fetch = array();
-        foreach($target_photosets as $photoset_key) {
-            if(isset($this->available_albums[$photoset_key])) {
-                $photosets_to_fetch[$photoset_key] = $this->available_albums[$photoset_key]['id'];
+        foreach($target_photosets as $album_key) {
+            if(isset($this->available_albums[$album_key])) {
+                $photosets_to_fetch[$album_key] = $this->available_albums[$album_key]['id'];
             } else {
                 // Requested non-existant photoset
                 return array();
@@ -65,22 +65,70 @@ class Extraction_AlbumPhotoPicker
     //{{{ drawPhotoFromAlbum(string)
     /**
       * Pick a random photo from an album's list of photos, and then remove it from that list
+      * If first selected photo is unusable, loop until a selectable photo is found or the list is empty
+      *
       * @param  string   Album from which to pick a random photo from
       * @return array    Key-value array containing all relevant metadata for the picked photo
       */
-    public function drawPhotoFromAlbum($photoset_key)
+    public function drawPhotoFromAlbum($album_key)
     {
-        if(empty($this->photos_by_album[$photoset_key]['photo'])) {
-            // Only reach here when there are no more photos left to pick
-            return array();
+        $processed_photo = null;
+        while(is_null($processed_photo)) {
+            if(empty($this->photos_by_album[$album_key]['photo'])) {
+                // Only reach here when there are no more photos left to pick
+                return array();
+            }
+
+            $photo_count = count($this->photos_by_album[$album_key]['photo']);
+            $random_photo_key = array_rand($this->photos_by_album[$album_key]['photo']);
+            $photo_to_draw = $this->photos_by_album[$album_key]['photo'][$random_photo_key];
+            unset($this->photos_by_album[$album_key]['photo'][$random_photo_key]);
+
+            $processed_photo = $this->preparePhotoInformation($photo_to_draw, $album_key);
+        }
+        return $processed_photo;
+    }
+    //}}}
+
+
+    //{{{ preparePhotoInformation(array, string)
+    /**
+      * Produce array containing all data necessary for controller and view
+      * @param  array    Result array for photo from Flickr API
+      * @param  string   Album key from which photo was picked
+      * @return array    Key-value array containing relevant metadata for photo
+      *                  All possible return fields are initialized at top of function
+      *                  If the photo is not valid for display, return null
+      */
+    protected function preparePhotoInformation($photo_from_flickr, $album_key)
+    {
+        // Init result fields
+        $url_base = Registry_FlickrMariten::BASE_URL;
+        $photo_data = array(
+            'id'            => $photo_from_flickr['id'],
+            'photo_url'     => $url_base . $photo_from_flickr['id'] . '/',
+            'title'         => $photo_from_flickr['title'],
+            'img_url'       => $photo_from_flickr['url_m'],
+            'album_display' => $this->available_albums[$album_key]['display'],
+            'album_url'     => $url_base . 'sets/' . $this->available_albums[$album_key]['id'] . '/',
+            'tag_url'       => '',
+            'prefecture'    => '',
+        );
+
+        // Prettify title
+        $photo_data['title'] = Registry_FlickrMariten::removeTitlePrefix($photo_from_flickr['title']);
+
+        // Determine which prefecture photo was taken in
+        $all_tags = explode(' ', $photo_from_flickr['tags']);
+        foreach($all_tags as $photo_tag) {
+            if(Registry_FlickrMariten::isPrefectureTag($photo_tag)) {
+                $photo_data['prefecture'] = Registry_FlickrMariten::getPrefectureDisplay($photo_tag);
+                $photo_data['tag_url'] = $url_base . 'tags/' . urlencode($photo_tag) . '/';
+                break;
+            }
         }
 
-        $photo_count = count($this->photos_by_album[$photoset_key]['photo']);
-        $random_photo_key = array_rand($this->photos_by_album[$photoset_key]['photo']);
-        $photo_to_draw = $this->photos_by_album[$photoset_key]['photo'][$random_photo_key];
-        unset($this->photos_by_album[$photoset_key]['photo'][$random_photo_key]);
-
-        return $this->preparePhotoInformation($photo_to_draw, $photoset_key);
+        return $photo_data;
     }
     //}}}
 }
