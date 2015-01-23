@@ -2,14 +2,34 @@
 
 class CurlMulti
 {
+    protected $options = array();
+
+    //{{{ parseOptions(array)
+    protected function parseOptions($received_options)
+    {
+        // Clear option
+        $this->options = array(
+            'decode_json'   => false,
+        );
+
+        foreach($this->options as $opt_key => $opt_value) {
+            if(isset($received_options[$opt_key])) {
+                $this->options[$opt_key] = $received_options[$opt_key];
+            }
+        }
+    }
+    //}}}
+
+
     //{{{ performParallelRequests(array)
-    public function performParallelRequests($set_of_urls)
+    public function performParallelRequests($set_of_urls, $request_options = array())
     {
         if(empty($set_of_urls)) {
             return array();
         }
 
-        // Init CURL handlers and result array
+        // Init options, CURL handlers and, result array
+        $this->parseOptions($request_options);
         $curl_handler = curl_multi_init();
         $all_requests = array();
         $all_responses = array();
@@ -37,7 +57,13 @@ class CurlMulti
             $raw_response = curl_multi_getcontent($curl_single_handler);
             curl_multi_remove_handle($curl_handler, $curl_single_handler);
             curl_close($curl_single_handler);
-            $all_responses[$key] = $raw_response;
+
+            // Decode if necessary
+            if($this->options['decode_json']) {
+                $all_responses[$key] = $this->decodeResponseJSON($raw_response);
+            } else {
+                $all_responses[$key] = $raw_response;
+            }
         }
         curl_multi_close($curl_handler);
 
@@ -75,6 +101,18 @@ class CurlMulti
         }
 
         return;
+    }
+    //}}}
+
+
+    //{{{ decodeResponseJSON(string)
+    protected function decodeResponseJSON($response_string)
+    {
+        if(empty($response_string)) {
+            return array();
+        } else {
+            return json_decode($response_string, true);
+        }
     }
     //}}}
 }
