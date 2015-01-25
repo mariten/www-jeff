@@ -25,6 +25,13 @@
     </div>
 </div>
 
+{if $sample_photos}
+<!-- Features -->
+<div style="margin-top:3em;">
+    {include file='inc/parts/photo_feature.tpl'}
+</div>
+{/if}
+
 <!-- Main -->
 <div id="main-wrapper">
     <div class="container">
