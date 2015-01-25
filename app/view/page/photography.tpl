@@ -7,6 +7,11 @@
 <!-- Header -->
 {include file='inc/parts/page_header.tpl'}
 
+{if $sample_photos}
+<!-- Features -->
+    {include file='inc/parts/photo_feature.tpl'}
+{/if}
+
 <!-- Main -->
 <div id="main-wrapper">
     <div class="container">
@@ -14,14 +19,6 @@
         <!-- Content -->
         <div id="content">
 
-            <article>
-
-                <h2>Samples</h2>
-
-                <p><b>COMING SOON!</b></p>
-                <p>Will post live samples soon from some of my Flickr albums using their API</p>
-
-            </article>
             <article>
 
                 <h2>My Photos Around the Web</h2>

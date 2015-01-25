@@ -9,6 +9,8 @@ class Controller
     protected $req_params = array();
     protected $smarty = null;
 
+    const FEATURE_PHOTOS_PER_ROW   = 3;
+
 
     //{{{ init(string)
     public function init($url_path)
@@ -51,6 +53,37 @@ class Controller
     {
         $personal_web_links = PersonalWebLinks::getAsArray();
         $this->smarty->assign('personal_web_links', $personal_web_links);
+    }
+    //}}}
+
+
+    //{{{ assignSamplePhotosInRows(array)
+    protected function assignSamplePhotosInRows($sample_photos)
+    {
+        // Only show photos if all albums were successfully queried and selected
+        $photo_count = count($sample_photos);
+        $row_count = (int)floor($photo_count / self::FEATURE_PHOTOS_PER_ROW);
+
+        // Group sample photos into rows
+        $sample_photos_in_rows = array();
+        $row = 1;
+        $i = 1;
+        foreach($sample_photos as $album_key => $selected_photo) {
+            $sample_photos_in_rows[$row][$album_key] = $selected_photo;
+            if($i >= self::FEATURE_PHOTOS_PER_ROW) {
+                $i = 1;
+                $row++;
+                if($row > $row_count) {
+                    // Do not continue displaying photos if beyond number of rows to display
+                    break;
+                }
+            } else {
+                $i++;
+            }
+        }
+
+        // Store for template
+        $this->smarty->assign('sample_photos', $sample_photos_in_rows);
     }
     //}}}
 }
