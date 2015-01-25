@@ -7,19 +7,21 @@ class Page_Photography extends Controller
     public function perform()
     {
         // Flickr photoset pictures for display
-        $target_albums = array(
-            'olden_japan',
-            'modern_japan',
-            'natural_japan',
-            'japan_at_night',
-            'food_in_japan',
-            'animals_in_japan',
+        $ordered_sample_photos = array(
+            'olden_japan'        => array(),
+            'modern_japan'       => array(),
+            'natural_japan'      => array(),
+            'japan_at_night'     => array(),
+            'food_in_japan'      => array(),
+            'animals_in_japan'   => array(),
         );
+        $target_albums = array_keys($ordered_sample_photos);
 
         $photo_picker = new Extraction_AlbumPhotoPicker();
-        $photo_picker->populatePhotosetLists($target_albums);
+        $api_success = $photo_picker->populatePhotosetLists($target_albums);
 
-        // Pick random photo out of each set
+        // Pick random photo out of each set in random order
+        shuffle($target_albums);
         $all_albums_present = true;
         $sample_photos = array();
         foreach($target_albums as $album_key) {
@@ -29,12 +31,12 @@ class Page_Photography extends Controller
                 $all_albums_present = false;
                 break;
             } else {
-                $sample_photos[$album_key] = $selected_photo;
+                $ordered_sample_photos[$album_key] = $selected_photo;
             }
         }
 
-        if($all_albums_present) {
-            $this->assignSamplePhotosInRows($sample_photos);
+        if($api_success && $all_albums_present) {
+            $this->assignSamplePhotosInRows($ordered_sample_photos);
         }
 
         $this->smarty->display('page/photography.tpl');
