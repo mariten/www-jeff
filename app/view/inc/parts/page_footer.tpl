@@ -21,7 +21,7 @@
                 <!-- Credits -->
                 <div id="copyright">
                     <ul class="menu">
-                        <li>&copy; Jeff Case. All rights reserved</li>
+                        <li>&copy; Jeff Case. All Rights Reserved.</li>
                         <li>Original Design: <a href="http://html5up.net/verti">Verti</a> by <a href="http://html5up.net">HTML5 UP</a></li>
                     </ul>
                 </div>
