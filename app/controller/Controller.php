@@ -1,8 +1,8 @@
 <?php
 // Global Includes
 require_once SMARTY_DIR . 'Smarty.class.php';
-require_once JEFF_BASE_DIR . 'app/model/NavbarLinks.php';
-require_once JEFF_BASE_DIR . 'app/model/PersonalWebLinks.php';
+require_once JEFF_BASE_DIR . 'app/model/Registry/NavbarLinks.php';
+require_once JEFF_BASE_DIR . 'app/model/Registry/PersonalWebLinks.php';
 
 class Controller
 {
@@ -17,8 +17,8 @@ class Controller
     {
         // Smarty setup
         $this->smarty = new Smarty();
-        $this->smarty->template_dir =  JEFF_BASE_DIR . 'app/view/';
-        $this->smarty->compile_dir =   JEFF_BASE_DIR . 'tmp/template_c/';
+        $this->smarty->template_dir   = JEFF_BASE_DIR . 'app/view/';
+        $this->smarty->compile_dir    = JEFF_BASE_DIR . 'tmp/template_c/';
 
         // Record URL path for this request in template
         $this->smarty->assign('request_path', '/' . $url_path);
@@ -42,7 +42,7 @@ class Controller
     //{{{ assignNavbarLinks()
     protected function assignNavbarLinks()
     {
-        $navbar_links = NavbarLinks::getAsArray();
+        $navbar_links = Registry_NavbarLinks::getAsArray();
         $this->smarty->assign('navbar_links', $navbar_links);
     }
     //}}}
@@ -51,7 +51,7 @@ class Controller
     //{{{ assignPersonalWebLinks()
     protected function assignPersonalWebLinks()
     {
-        $personal_web_links = PersonalWebLinks::getAsArray();
+        $personal_web_links = Registry_PersonalWebLinks::getAsArray();
         $this->smarty->assign('personal_web_links', $personal_web_links);
     }
     //}}}

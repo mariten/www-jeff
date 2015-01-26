@@ -1,6 +1,6 @@
 <?php
 
-class NavbarLinks
+class Registry_NavbarLinks
 {
     //{{{ getAsArray()
     public static function getAsArray()

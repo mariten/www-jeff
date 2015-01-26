@@ -1,6 +1,6 @@
 <?php
 
-class PersonalWebLinks
+class Registry_PersonalWebLinks
 {
     // Web link URL constants
     const JEFF_URL_LINKEDIN        = 'https://www.linkedin.com/pub/jeff-case/12/4b4/847';
