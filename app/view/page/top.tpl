@@ -25,13 +25,6 @@
     </div>
 </div>
 
-{if $sample_photos}
-<!-- Features -->
-<div style="margin-top:3em;">
-    {include file='inc/parts/photo_feature.tpl'}
-</div>
-{/if}
-
 <!-- Main -->
 <div id="main-wrapper">
     <div class="container">
@@ -62,7 +55,7 @@
 
                         <p>Throughout my life I have developed numerous pieces of software and websites, some entirely from scratch, and in recent years have worked for two major Japanese web services that have millions of daily users.  For these large-scale services I have primarily worked with search, rankings, recommendations, data visualization, and other data-handling centric functionality.</p>
 
-                        <p>When not programming, I may be found eating tasty food or exploring - either in a video game or in the real world.  I love maps and enjoy traveling around Japan with my wife while taking pictures of the abundant modern environments, traditional heritage, natural beauty, and good food available here.  A small selection of these photos are available for sale on Getty and a few are even used by the Yahoo! Weather app.</p>
+                        <p>When not programming, I am usually found looking at a map.  I love exploring in search of pretty and/or interesting places as well as tasty food - or sometimes my penchant for exploring takes around an engaging video game world.  My fondness for exploring naturally lends itself to travel - I enjoy traveling around with my wife and taking pictures, particularly in Japan due to the abundant modern environments, historic scenes, natural beauty, and good food available.  You can see a sample of some of my photos taken in Japan below, or feel free to check out the <a href="/photography">photography page</a> for even more.
 
                     </section>
                 </div>
@@ -71,6 +64,13 @@
         </div>
     </div>
 </div>
+
+{if $sample_photos}
+<!-- Features -->
+<div style="margin-top:3em;">
+    {include file='inc/parts/photo_feature.tpl'}
+</div>
+{/if}
 
 <!-- Footer -->
 {include file='inc/parts/page_footer.tpl'}
