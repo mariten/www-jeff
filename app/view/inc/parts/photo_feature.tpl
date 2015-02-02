@@ -10,7 +10,7 @@
                     <div class="inner">
                         <header>
                             <h2><a href="{$picked_photo.photo_url}" style="color:#444;">{$picked_photo.title}</a></h2>
-                            <p>From album <a href="{$picked_photo.album_url}">{$picked_photo.album_display}</a></p>
+                            <p>Sample from <b><a href="{$picked_photo.album_url}">{$picked_photo.album_display}</a></b></p>
                         </header>
                         <p>
         {if $picked_photo.prefecture}
