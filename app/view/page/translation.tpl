@@ -18,12 +18,12 @@
 
                 <h2>Requests</h2>
 
-                <p>At present I am focused on my full-time job as a software engineer as well as various projects in my spare time, and am generally not accepting translation requests.  However, feel free to contact me and discuss a Japanese to English technical translation project you have and I can direct you to a colleague or in some special circumstances potentially handle it myself.</p>
+                <p>At present I am focused on my full-time job as a software engineer, a few established translation clients, as well as various projects in my spare time.  In generally I am not accepting new translation requests.  However, please feel free to contact me and discuss a Japanese to English technical translation project you have and I can direct you to one of my colleagues.</p>
 
             </article>
             <article>
 
-                <h2>Samples</h2>
+                <h2>Translation Samples</h2>
 
                 <p><b>COMING SOON!</b></p>
 

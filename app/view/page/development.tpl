@@ -31,7 +31,7 @@
                 <p>Has <a href="http://mariten.github.io/kanatools-java">in-depth documentation</a> as well.</p>
 
                 <h3><a href="https://github.com/ubilabs/flickr_geocoding_bookmarklet">Flickr Geocoding Bookmarklet</a></h3>
-                <p>A small script which when called from a Flickr photo page allows the user to geotag with extreme accuracy using Google Maps.  This is especially helpful in Japan due to the amount of detail present in the Zenrin map of Japan used by Google, as opposed to the very map used by Flickr (Yahoo US) which has very poor detail</p>
+                <p>As the <a href="/photography">photography</a> page will let you know, I love Flickr and its API.  However, since the vast majority of my photos are taken in Japan I have always had some difficulty geotagging photos on the Flickr website because they show the Yahoo US map of Japan which is of very poor quality and low detail.  This small script, which can be bookmarked and called from any Flickr photo page, allows a user to geotag a given Flickr photo with extreme accuracy using Google Maps, which when fully zoomed in offers an amazing level of detail.</p>
 
                 <h3><a href="https://github.com/mariten/json-cat">JSON Cat</a></h3>
                 <p>Output the content of JSON data files to the Linux command line (similar to the <b>cat</b> command) in a pretty, human-readable format - available in multiple langauges!</p>
@@ -40,7 +40,7 @@
                 <p>A small convenient Bash wrapper for <b>grep</b> that I use practically every day</p>
 
                 <h3><a href="https://www.openoffice.org/bibliographic/">OpenOffice Bibliographic</a></h3>
-                <p>Did some initial development for this project as my Capstone Project in college.  I worked on MODS storage backend in C++ for a plugin that would make it easier for academics to manage citations used in papers written in OpenOffice.  Unfortunately, this project (OOoBib, as it was known) is now defunct.</p>
+                <p>Did some initial development for this project as my Capstone Project in college.  I worked on the backend of a MODS (XML schema developed by the US Library of Congress) storage API in C++ for a plugin to make it easier for academics to manage citations used in papers written in OpenOffice.  Unfortunately, this project (OOoBib, as it was known) is now defunct.</p>
 
                 <h2>Cool Websites I've Made</h2>
                 <p>These are some full websites I have created</p>
