@@ -47,6 +47,6 @@
 </div>
 
 <!-- Footer -->
-{include file='inc/parts/page_footer.tpl'}
+{include file='inc/parts/page_footer.tpl' hide_social_icons=true}
 
 {include file='inc/html/body.tpl' closing=true}
