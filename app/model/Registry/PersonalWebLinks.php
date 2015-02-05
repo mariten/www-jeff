@@ -3,6 +3,7 @@
 class Registry_PersonalWebLinks
 {
     // Web link URL constants
+    const JEFF_URL_EMAIL           = 'mailto:jeff@mariten.com';
     const JEFF_URL_LINKEDIN        = 'https://www.linkedin.com/pub/jeff-case/12/4b4/847';
     const JEFF_URL_GITHUB          = 'https://github.com/mariten';
     const JEFF_URL_FLICKR          = 'https://www.flickr.com/photos/mariten/';
@@ -13,6 +14,12 @@ class Registry_PersonalWebLinks
     public static function getAsArray()
     {
         return array(
+
+            'email' => array(
+                'glyph'    => 'fa-envelope',
+                'display'  => 'Email',
+                'url'      => self::JEFF_URL_EMAIL,
+            ),
 
             'linkedin' => array(
                 'glyph'    => 'fa-linkedin',
