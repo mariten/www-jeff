@@ -32,9 +32,9 @@
                     <section class="last">
                         <h2>Get In Touch</h2>
 
-                        <p>I'm happy to hear from any and all about development, photography, translation, and more!</p>
+                        <p>I would be happy to hear from any and all about development, photography, translation, and more!</p>
 
-                        <p>I am currently active on several web communities shown on the left, please feel free to contact me at any of them - LinkedIn or Flickr are probably the easiest.  I will respond in time to genuine queries.</p>
+                        <p>My email address is <a href="mailto:jeff@mariten.com">jeff@mariten.com</a>.  I am also active on several web communities (see left-hand bar), please feel free to contact me at any of them - LinkedIn or Flickr are probably the best method.  I will respond to genuine queries in time.</p>
 
                     </section>
                 </div>
