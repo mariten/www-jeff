@@ -29,7 +29,7 @@
 <div id="main-wrapper">
     <div class="container">
         <div class="row">
-            <div class="4u">
+            <div class="3u">
             
                 <!-- Sidebar -->
                 <div id="sidebar">
@@ -44,7 +44,7 @@
                 </div>
             
             </div>
-            <div class="8u skel-cell-important">
+            <div class="9u skel-cell-important">
 
                 <!-- Content -->
                 <div id="content">
