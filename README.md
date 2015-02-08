@@ -1,6 +1,6 @@
-jeff.mariten.com
-================
-**jeff-www** is a small PHP/Smarty system that powers my personal website [About Jeff Case](http://jeff.mariten.com)
+[jeff.mariten.com](http://jeff.mariten.com)
+==============================================
+**jeff-www** is a small PHP/Smarty system that powers my personal website *[About Jeff Case](http://jeff.mariten.com)*
 
 ## Features
 #### Technologies Used
