@@ -1,3 +1,10 @@
+v1.0.0 :: Feb 09 2015
+======================
+* Polished wording and content on each page
+* Added sample Flickr photos to bottom of top page as well (one row only)
+* Cleaned up code, added more comments
+* Wrote README and LICENSE
+
 v0.9.0 :: Jan 25 2015
 ======================
 * Added six sample photos (in two rows of three) to photography page pulled from Flickr API
