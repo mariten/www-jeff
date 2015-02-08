@@ -12,7 +12,7 @@
         <div class="row">
             <div class="7u">
                 <h2>Jeff Case</h2>
-                <p>Developer, photographer, tinkerer, translator, explorer, and lover of creating things</p>
+                <p>Developer, photographer, creator, tinkerer, translator, explorer, computer geek</p>
             </div>
             <div class="5u">
                 <ul>
@@ -51,11 +51,11 @@
                     <section class="last">
                         <h2>About Me</h2>
 
-                        <p>Hi and thanks for visiting!  I am a software engineer living and working in Tokyo, originally from Dayton, Ohio.  I graduated from Kent State University in 2006 with a degree in Computer Science and have been living in Japan ever since, first in Mie Prefecture (home to Ise Grand Shrine!) and later in central Tokyo.  During my years in Mie I learned Japanese on my own over the years and, bit-by-bit, achieved full professional fluency.</p>
+                        <p>I am a software engineer living and working in Tokyo, originally from Dayton, Ohio.  I graduated from Kent State University in 2006 with a degree in Computer Science and have been living in Japan ever since, first in Mie Prefecture (home to Ise Grand Shrine!) and later in central Tokyo.  During my time in Mie I taught myself Japanese and through daily practice achieved full professional fluency over the years.</p>
 
-                        <p>Throughout my life I have developed numerous pieces of software and websites, some entirely from scratch, and in recent years have worked for two major Japanese web services that have millions of daily users.  For these large-scale services I have primarily worked with search, rankings, recommendations, data visualization, and other data-handling centric functionality.</p>
+                        <p>Throughout my life I have developed numerous pieces of software and websites, some of which are listed on the <a href="/development">development page</a>.  During my Tokyo years I have worked for two major Japanese web services that have millions of daily users.  For these large-scale services I have primarily worked with search, rankings, recommendations, data visualization, validation tools, and other data ETL functionality.  While living in Mie I also created and operated a number of English-language websites for local information.</p>
 
-                        <p>When not programming, I am usually found looking at a map.  I love exploring in search of pretty and/or interesting places as well as tasty food - or sometimes my penchant for exploring takes around an engaging video game world.  My fondness for exploring naturally lends itself to travel - I enjoy traveling around with my wife and taking pictures, particularly in Japan due to the abundant modern environments, historic scenes, natural beauty, and good food available.  You can see a sample of some of my photos taken in Japan below, or feel free to check out the <a href="/photography">photography page</a> for even more.
+                        <p>When not programming, I am often found looking at maps.  I love exploring - finding stunning and/or interesting places, searching for tasty food, or just wandering around and seeking out new paths.  My fondness for exploring naturally lends itself to travel.  I travel when I can and enjoy taking pictures, particularly in Japan, due to the abundance of modern environments, historic scenes, natural beauty, and good food available.  You can see a sample of some of my photos taken in Japan below, or feel free to check out the <a href="/photography">photography page</a> for even more.
 
                     </section>
                 </div>
