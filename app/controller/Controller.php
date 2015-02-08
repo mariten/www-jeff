@@ -6,7 +6,7 @@ require_once JEFF_BASE_DIR . 'app/model/Registry/PersonalWebLinks.php';
 
 class Controller
 {
-    protected $req_params = array();
+    protected $request_params = array();
     protected $smarty = null;
 
     const FEATURE_PHOTOS_PER_ROW   = 3;
@@ -31,9 +31,15 @@ class Controller
 
 
     //{{{ checkParams(ParamManager)
+    /**
+      * Assign and validate any necessary params
+      *
+      * @param  object   ParamManager object for the current request
+      * @result array    List of error messages, empty array if no errors
+      */
     public function checkParams($param_manager)
     {
-        $this->req_params = $param_manager;
+        $this->request_params = $param_manager;
         return array();
     }
     //}}}

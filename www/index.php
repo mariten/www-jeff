@@ -41,12 +41,6 @@ case 'contact':
     $action = new Page_Contact();
     break;
 
-case 'resume':
-    // Resume top page
-    echo('resume');
-    exit;
-    break;
-
 default:
     // Invalid path, show 404 page
     echo('404');
@@ -56,5 +50,9 @@ default:
 
 // Execute action
 $action->init($url_path);
-$action->checkParams($param_manager);
-$action->perform();
+$error_messages = $action->checkParams($param_manager);
+if(empty($error_messages)) {
+    $action->perform();
+} else {
+    echo('Error');
+}
