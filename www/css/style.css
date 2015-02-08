@@ -664,6 +664,11 @@
         overflow: hidden;
     }
 
+        #logo a
+        {
+            text-decoration: none;
+        }
+
         #logo img
         {
             width: 64px;
