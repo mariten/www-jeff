@@ -2,14 +2,22 @@
 <html lang="en">
     <head>
 {if $head_title}
-        <title>{$head_title}</title>
+    {assign var="full_title" value="`$head_title`"}
 {elseif $head_title_suffix}
-        <title>{$smarty.const.DEFAULT_HTML_TITLE} :: {$head_title_suffix}</title>
+    {assign var="full_title" value="`$smarty.const.DEFAULT_HTML_TITLE` :: `$head_title_suffix`"}
 {else}
-        <title>{$smarty.const.DEFAULT_HTML_TITLE}</title>
+    {assign var="full_title" value="`$smarty.const.DEFAULT_HTML_TITLE`"}
 {/if}
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <meta name="description" content="{$head_description}" />
+
+        <title>{$full_title}</title>
+        <meta http-equiv="content-type"  content="text/html; charset=utf-8" />
+        <meta name="description"         content="{$head_description}" />
+        <meta property="og:title"        content="{$full_title}" />
+        <meta property="og:description"  content="{$head_description}" />
+        <meta property="og:image"        content="{$smarty.const.JEFF_DOMAIN_CANONICAL}/images/jeff200face.png" />
+        <meta property="og:url"          content="{$smarty.const.JEFF_DOMAIN_CANONICAL}{$request_path}" />
+        <link rel="canonical"            href="{$smarty.const.JEFF_DOMAIN_CANONICAL}{$request_path}" />
+
         <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
         <link rel="stylesheet" href="css/style.css" />
 
