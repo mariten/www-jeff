@@ -52,6 +52,16 @@ class CurlMulti
                 continue;
             }
 
+            // Check if result for this URL is already cached
+            if($this->options['use_cache']) {
+                $cached_result = $this->readCachedResult($request_url);
+                if(!is_null($cached_result)) {
+                    // Found valid cached result, do not query this URL
+                    $all_responses[$key] = $cached_result;
+                    continue;
+                }
+            }
+
             // Create new CURL request for this URL
             $curl_request = curl_init();
             curl_setopt($curl_request, CURLOPT_URL,             $request_url);
@@ -125,6 +135,49 @@ class CurlMulti
         } else {
             return json_decode($response_string, true);
         }
+    }
+    //}}}
+
+
+    //{{{ readCachedResult(string)
+    protected function readCachedResult($url)
+    {
+        $cache_filename = $this->produceCacheFilename($url);
+        if(!file_exists($cache_filename)) {
+            // Not in cache
+            return null;
+        }
+
+        $raw_cache = file_get_contents($cache_filename);
+        $cached_data = @json_decode($raw_cache, true);
+        if($cached_data === false
+        || !isset($cached_data['expire_unixtime'])
+        || !isset($cached_data['content'])
+        || !is_numeric($cached_data['expire_unixtime'])) {
+            // Cached JSON is invalid
+            return null;
+        }
+
+        if(time() >= $cached_data['expire_unixtime']) {
+            // Cache is expired
+            return null;
+        }
+
+        // Cache is valid
+        return $cached_data['content'];
+    }
+    //}}}
+
+
+    //{{{ produceCacheFilename(string)
+    protected function produceCacheFilename($url)
+    {
+        $unique_name = $this->options['cache_path'];
+        if(substr($unique_name, -1) !== '/') {
+            $unique_name .= '/';
+        }
+        $unique_name .= sha1($url) . '.json';
+        return $unique_name;
     }
     //}}}
 }
