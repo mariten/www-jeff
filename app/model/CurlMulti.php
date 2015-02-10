@@ -10,12 +10,24 @@ class CurlMulti
         // Clear option
         $this->options = array(
             'decode_json'   => false,
+            'use_cache'     => true,
+            'cache_expires' => 0,
+            'cache_path'    => '',
         );
 
         foreach($this->options as $opt_key => $opt_value) {
             if(isset($received_options[$opt_key])) {
                 $this->options[$opt_key] = $received_options[$opt_key];
             }
+        }
+
+        // Only use cache if expiration and path are correctly specified
+        if($this->options['cache_expires'] > 0
+        && !empty($this->options['cache_path'])
+        && file_exists($this->options['cache_path'])) {
+            $this->options['use_cache'] = true;
+        } else {
+            $this->options['use_cache'] = false;
         }
     }
     //}}}
