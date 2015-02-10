@@ -18,6 +18,7 @@ Performs asynchronous CURL queries at the Flickr API to pick a photo from specif
   * Each photo must have been taken in a different prefecture as all of the other randomly selected photos
   * Check whether the photo is geotagged, and if so show a link to a satellite map location of where it was shot
 * Perform queries to Flickr API asynchronously using `curl_multi` wrapper
+* Cache API raw results, as my Flickr photosets are not updated more than once a day
 
 #### Soft Rewrite Rules
 All processing of the URL path and subsequent rewrite rules are handled by the top-level [index.php](www/index.php), with just a [single Apache-side rewrite rule](www/.htaccess) which indiscriminately forwards the entire URL path string to PHP where parsing and path checks can be handled more programatically.

@@ -50,7 +50,10 @@ class API_Flickr
     protected function apiQueryMulti($urls)
     {
         $flickr_response_options = array(
-            'decode_json' => true,
+            'decode_json'    => true,
+            'use_cache'      => true,
+            'cache_expires'  => 86400,
+            'cache_path'     => CACHE_FILE_DIR,
         );
         return $this->curl->performParallelRequests($urls, $flickr_response_options);
     }

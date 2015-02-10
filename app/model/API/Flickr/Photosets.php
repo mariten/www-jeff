@@ -3,7 +3,7 @@ require_once JEFF_BASE_DIR . 'app/model/API/Flickr.php';
 
 class API_Flickr_Photosets extends API_Flickr
 {
-    const DEFAULT_PHOTO_COUNT = 100;
+    const DEFAULT_PHOTO_COUNT = 300;
     protected static $DEFAULT_EXTRA_FIELDS = array(
         'date_taken',
         'url_m',

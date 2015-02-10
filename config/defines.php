@@ -5,7 +5,10 @@
 define('JEFF_BASE_DIR',         dirname(__FILE__) . '/../');
 
 //// Smarty-related
-define('SMARTY_DIR',            JEFF_BASE_DIR . '/lib/smarty/');
+define('SMARTY_DIR',            JEFF_BASE_DIR . 'lib/smarty/');
+
+//// For cached temporary data
+define('CACHE_FILE_DIR',        JEFF_BASE_DIR . 'tmp/cache/');
 
 
 // Canonical
