@@ -77,17 +77,26 @@ class CurlMulti
         // Fetch responses and close all handles
         foreach($all_requests as $key => $curl_single_handler) {
             $raw_response = curl_multi_getcontent($curl_single_handler);
+            $all_responses[$key] = $raw_response;
+
+            if($this->options['use_cache']) {
+                // Store for later use if caching is turned on
+                $request_url = curl_getinfo($curl_single_handler, CURLINFO_EFFECTIVE_URL);
+                $this->writeCachedResult($request_url, $raw_response);
+            }
+
             curl_multi_remove_handle($curl_handler, $curl_single_handler);
             curl_close($curl_single_handler);
+        }
+        curl_multi_close($curl_handler);
 
+        // Post-processing of results
+        foreach($all_responses as $key => $raw_response) {
             // Decode if necessary
             if($this->options['decode_json']) {
                 $all_responses[$key] = $this->decodeResponseJSON($raw_response);
-            } else {
-                $all_responses[$key] = $raw_response;
             }
         }
-        curl_multi_close($curl_handler);
 
         return $all_responses;
     }
@@ -165,6 +174,21 @@ class CurlMulti
 
         // Cache is valid
         return $cached_data['content'];
+    }
+    //}}}
+
+
+    //{{{ writeCachedResult(string, string)
+    protected function writeCachedResult($url, $content)
+    {
+        $cache_filename = $this->produceCacheFilename($url);
+        $expire_unixtime = time() + $this->options['cache_expires'];
+        $data_for_cache = array(
+            'expire_unixtime' => $expire_unixtime,
+            'content'         => $content,
+        );
+
+        file_put_contents($cache_filename, json_encode($data_for_cache));
     }
     //}}}
 
