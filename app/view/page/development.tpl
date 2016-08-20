@@ -49,9 +49,6 @@
                 <p>A comprehensive resource for English-speakers living in Mie Prefecture to thrive during their stay there.  I was not only in charge of this service in a technical capacity, but an editing capacity as well.  In addition to installing, customizing, and in some cases extending <a href="http://www.mediawiki.org">MediaWiki</a>, I curated the content as well.  I wrote more than half the articles myself, oversaw edits, enforced style guidelines, and more.</p>
                 <p>It was created to be useful to both those living in Mie as well as visitors, and some of the articles are now top-ranked in Google's search results.</p>
 
-                <h3><a href="http://www.mielifemagazine.com">Mie Life Magazine</a></h3>
-                <p>A fully bilingual website for an online magazine created for residents of Mie Prefecture.  I created and designed the site from scratch using PHP and MySQL, as well as set up the hosting servers and domain.  Though the magazine has been defunct for several years, the content remains.</p>
-
                 <h3><a href="http://wedding.mariten.com">A Website for My Own Wedding</a></h3>
                 <p>Complete with a fully-functional online RSVP service, spam-proof guestbook, photo album, as well as a Google Map guide for Akron, Ohio</p>
 
