@@ -1,9 +1,16 @@
+v1.0.1 :: Feb 10 2015
+======================
+* Added caching to `CurlMulti` class using SHA1 on the request string
+* Flickr Photoset results are now cached locally (for 24 hours) allowing very quick retrieval - only wait for API results before showing page once per day
+
+
 v1.0.0 :: Feb 09 2015
 ======================
 * Polished wording and content on each page
 * Added sample Flickr photos to bottom of top page as well (one row only)
 * Cleaned up code, added more comments
 * Wrote README and LICENSE
+
 
 v0.9.0 :: Jan 25 2015
 ======================
@@ -15,12 +22,14 @@ v0.9.0 :: Jan 25 2015
   * Each randomly selected photo must be from a different prefecture.  This ensures that all six photos are not from the same place in Japan.
 * Display medium-sized photo, album, prefecture, date taken, and (if available) link to satellite map showing where photo was taken if it is geotagged
 
+
 v0.6.0 :: Jan 19 2015
 ======================
 * Added basic summaries for remaining pages (development, photography, translation, and contact)
 * Added data registries for social web links and navbar under `app/model/Registry/`
 * Made simple controllers and templates for each
 * Polished wording on top page
+
 
 v0.5.0 :: Jan 08 2015
 ======================
@@ -29,12 +38,14 @@ v0.5.0 :: Jan 08 2015
 * Cleaned up unnecessarily elements on page, particularly header/footer
 * Fixed rendering issue where page would for just an instant appear without any CSS applied
 
+
 v0.1.0 :: Nov 27 2014
 ======================
 * Added `index.php` to handle all requests
 * Added soft rewrite rule logic to handle URL branching
 * Set up Smarty v2.6.28
 * Added parent `Controller.php` and basic logic flow from receiving a URL to displaying a template
+
 
 v0.0.1 :: Nov 18 2014
 ======================
