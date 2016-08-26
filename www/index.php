@@ -17,29 +17,39 @@ $action = null;
 switch($url_path) {
 
 case '':
+case 'top':
     require_once JEFF_BASE_DIR . 'app/controller/page/Top.php';
     $action = new Page_Top();
     break;
+case 'async/top':
+    require_once JEFF_BASE_DIR . 'app/controller/page/async/Top.php';
+    $action = new Page_Async_Top();
+    break;
+
 
 case 'development':
     require_once JEFF_BASE_DIR . 'app/controller/page/Development.php';
     $action = new Page_Development();
     break;
 
+
 case 'photography':
     require_once JEFF_BASE_DIR . 'app/controller/page/Photography.php';
     $action = new Page_Photography();
     break;
+
 
 case 'translation':
     require_once JEFF_BASE_DIR . 'app/controller/page/Translation.php';
     $action = new Page_Translation();
     break;
 
+
 case 'contact':
     require_once JEFF_BASE_DIR . 'app/controller/page/Contact.php';
     $action = new Page_Contact();
     break;
+
 
 default:
     // Invalid path, show 404 page
