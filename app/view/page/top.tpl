@@ -67,10 +67,35 @@
 
 <!-- Photo Features Placeholder -->
 <div id="photos_for_home" style="margin-top:3em;">
-{include file='inc/parts/photo_loader.tpl'}
+    {include file='inc/parts/photo_loader.tpl'}
 </div>
 
 <!-- Footer -->
 {include file='inc/parts/page_footer.tpl'}
+
+
+<!-- JS for After OnLoad -->
+{literal}
+<script>
+function lazyload_home_flickr_pics()
+{
+    $.ajax({
+        url:        "async/top?ts=" + Date.now(),
+        type:       "GET",
+        dataType:   "html",
+        success: function(photos_html) {
+            // Returns photo HTML as-is, simply "replace" the current <div> in DOM with the results of this API
+            var div_for_results = $('<div />').append(photos_html);
+            $('#photos_for_home').html(div_for_results);
+        },
+        error: function(xhr, http_status) {
+            $('#photos_for_home').remove();
+        }
+    });
+}
+
+window.onload_function_queue.push(lazyload_home_flickr_pics)
+</script>
+{/literal}
 
 {include file='inc/html/body.tpl' closing=true}
