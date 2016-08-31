@@ -130,7 +130,7 @@ class Extraction_AlbumPhotoPicker
         // Check if photo is geotagged
         if(isset($photo_from_flickr['geo_is_public'])
         && $photo_from_flickr['geo_is_public'] == 1) {
-            $photo_data['geo_url'] = Registry_FlickrMariten::MAP_URL . $photo_data['id'];
+            $photo_data['geo_url'] = sprintf(Registry_FlickrMariten::MAP_URL, $photo_data['id'], $photo_from_flickr['latitude'], $photo_from_flickr['longitude']);
         }
 
         // Prettify title

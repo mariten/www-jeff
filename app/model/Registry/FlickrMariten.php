@@ -3,7 +3,7 @@ class Registry_FlickrMariten
 {
     const USER_ID      = '37073542@N08';
     const BASE_URL     = 'https://www.flickr.com/photos/mariten/';
-    const MAP_URL      = 'http://loc.alize.us/#/flickr:';
+    const MAP_URL      = 'https://www.flickr.com/photos/mariten/%s/map/?fLat=%s&fLon=%s&zl=14';
 
 
     //{{{ ALBUMS
