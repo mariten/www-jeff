@@ -81,7 +81,6 @@ class Extraction_AlbumPhotoPicker
                 return array();
             }
 
-            $photo_count = count($this->photos_by_album[$album_key]['photo']);
             $random_photo_key = array_rand($this->photos_by_album[$album_key]['photo']);
             $photo_to_draw = $this->photos_by_album[$album_key]['photo'][$random_photo_key];
             unset($this->photos_by_album[$album_key]['photo'][$random_photo_key]);

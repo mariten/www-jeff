@@ -4,6 +4,10 @@ require_once SMARTY_DIR . 'Smarty.class.php';
 require_once JEFF_BASE_DIR . 'app/model/Registry/NavbarLinks.php';
 require_once JEFF_BASE_DIR . 'app/model/Registry/PersonalWebLinks.php';
 
+// Flickr Photo Selection Includes
+require_once JEFF_BASE_DIR . 'app/model/Extraction/AlbumPhotoPicker.php';
+require_once JEFF_BASE_DIR . 'app/model/Registry/FlickrMariten.php';
+
 class Controller
 {
     protected $request_params = array();
@@ -59,6 +63,39 @@ class Controller
     {
         $personal_web_links = Registry_PersonalWebLinks::getAsArray();
         $this->smarty->assign('personal_web_links', $personal_web_links);
+    }
+    //}}}
+
+
+    //{{{ selectSinglePhotoPerAlbum(array)
+    protected function selectSinglePhotoPerAlbum($target_albums)
+    {
+        $photo_picker = new Extraction_AlbumPhotoPicker();
+        $api_success = $photo_picker->populatePhotosetLists($target_albums);
+        if(!$api_success) {
+            return array();
+        }
+
+        // Init ordered result array
+        $ordered_sample_photos = array();
+        foreach($target_albums as $album_key) {
+            $ordered_sample_photos[$album_key] = array();
+        }
+
+        // Pick random photo out of each set in random order
+        shuffle($target_albums);
+        foreach($target_albums as $album_key) {
+            $selected_photo = $photo_picker->drawPhotoFromAlbum($album_key);
+            if(empty($selected_photo)) {
+                // Query for this album key failed
+                // Only show photos when all albums succeed, quit
+                return array();
+            } else {
+                $ordered_sample_photos[$album_key] = $selected_photo;
+            }
+        }
+
+        return $ordered_sample_photos;
     }
     //}}}
 
