@@ -34,7 +34,7 @@
                 <p>As the <a href="/photography">photography</a> page will let you know, I love Flickr and its API.  However, since the vast majority of my photos are taken in Japan, I have always had some difficulty geotagging photos on the Flickr website because they show the Yahoo US map of Japan which is of very poor quality and low detail.  This small script, which can be bookmarked and called from any Flickr photo page, allows a user to geotag a given Flickr photo with the extreme accuracy of Google Maps, which when fully zoomed in offers an amazing level of detail.</p>
 
                 <h3><a href="https://github.com/mariten/json-cat">JSON Cat</a></h3>
-                <p>Output the content of JSON data files to the Linux command line (similar to the <b>cat</b> command) in a pretty, human-readable format - available in multiple langauges!</p>
+                <p>Output the content of JSON data files to the Linux command line (similar to the <b>cat</b> command) in a pretty, human-readable format — available in multiple langauges!</p>
 
                 <h3><a href="https://github.com/mariten/good-grep">Good Grep</a></h3>
                 <p>A small convenient Bash wrapper for <b>grep</b> that I use practically every day</p>
