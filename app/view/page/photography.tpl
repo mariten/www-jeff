@@ -29,7 +29,7 @@
                 <p>In addition to architecture and nature, I have a fondness for pictures of trains, amusing animals, and tasty food.  I have been lucky to live in Japan for many years as it is a place that provides abundant chances to see all of these these things.  Japan's penchant for mixing the very old and very new together makes for especially great photographic scenes.</p>
 
             </section>
-            <section>
+            <section class="last">
 
                 <h2>My Photos Around the Web</h2>
 

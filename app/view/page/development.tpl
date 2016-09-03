@@ -14,7 +14,7 @@
         <!-- Content -->
         <div id="content">
 
-            <article>
+            <section>
 
                 <h2>Development</h2>
 
@@ -22,8 +22,8 @@
 
                 <p>Much of my professional work has centered around search, recommendations, ETL scripts, data validation, unit testing (with continuous integration) for server-side code bases, and also front-end/UX optimizations via JavaScript.  A detailed listing of software engineering projects I have done through employment is available on my <a href="{$personal_web_links.linkedin.url}">LinkedIn profile</a>.  What I have listed below are some of the projects I have started or participated in on my own time.</p>
 
-            </article>
-            <article>
+            </section>
+            <section class="last">
 
                 <h2>Open Source Contributions</h2>
 
@@ -51,7 +51,7 @@
                 <h3><a href="http://wedding.mariten.com">A Website for My Own Wedding</a></h3>
                 <p>Complete with a fully-functional online RSVP service, spam-proof guestbook, photo album, as well as a Google Map guide for Akron, Ohio</p>
 
-            </article>
+            </section>
 
         </div>
     </div>

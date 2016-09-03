@@ -349,22 +349,17 @@
 /* Content                                                                       */
 /*********************************************************************************/
 
-    #content
-    {
-        border-bottom: solid 1px #e8e8e8;
-        padding-bottom: 4em;
-        margin-bottom: 3em !important;
-    }
-    
-        #content > :last-child
-        {
-            margin-bottom: 0 !important;
-        }
-    
     #sidebar
     {
     }
     
+        #sidebar > :first-child
+        {
+            border-top: solid 1px #e8e8e8;
+            margin-top: 3em;
+            padding-top: 3em;
+        }
+
         #sidebar > :last-child
         {
             margin-bottom: 0 !important;
