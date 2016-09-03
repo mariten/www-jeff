@@ -4,7 +4,7 @@
         <!-- Logo -->
         <div id="logo">
             <a href="/">
-                <img src="images/jeff64face.png" alt="[My Avatar]" width="64" height="64" />
+                <img src="/images/jeff64face.png" alt="[My Avatar]" width="64" height="64" />
                 <h1>About Jeff Case</h1>
             </a>
         </div>

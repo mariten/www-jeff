@@ -36,7 +36,7 @@
 
                         <p>My email address is <a href="mailto:jeff@mariten.com">jeff@mariten.com</a>.  I am also active on several web communities (see icons); please feel free to contact me at any of them — LinkedIn or Flickr are probably the best method.  I will respond to genuine queries in time.</p>
 
-                        <p><a class="image" href="https://www.flickr.com/photos/mariten/9253529281/"><img src="images/contact_bridge.jpg" alt="Long suspension bridge picture" /></a></p>
+                        <p><a class="image" href="https://www.flickr.com/photos/mariten/9253529281/"><img src="/images/contact_bridge.jpg" alt="Long suspension bridge picture" /></a></p>
 
                     </section>
                 </div>
