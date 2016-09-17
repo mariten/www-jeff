@@ -16,8 +16,12 @@ class Controller
 
 
     //{{{ init(string)
-    public function init($url_path)
+    public function init($param_manager)
     {
+        // Set params for this request
+        $this->request_params = $param_manager;
+        $url_path = $this->request_params->getParam('url_path', '');
+
         // Smarty setup
         $this->smarty = new Smarty();
         $this->smarty->template_dir   = JEFF_BASE_DIR . 'app/view/';
@@ -33,16 +37,16 @@ class Controller
     //}}}
 
 
-    //{{{ checkParams(ParamManager)
+    //{{{ loadParams()
     /**
-      * Assign and validate any necessary params
+      * Load and validate any necessary params
       *
-      * @param  object   ParamManager object for the current request
       * @result array    List of error messages, empty array if no errors
       */
-    public function checkParams($param_manager)
+    public function loadParams()
     {
-        $this->request_params = $param_manager;
+        // Parent function only returns empty array (no errors)
+        // Sub-class in individual controllers for request-specific logic
         return array();
     }
     //}}}
