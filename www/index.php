@@ -46,6 +46,10 @@ case 'photography/samples/animals-in-japan':
     require_once JEFF_BASE_DIR . 'app/controller/page/photography/Samples.php';
     $action = new Page_Photography_Samples();
     break;
+case 'async/photography/samples':
+    require_once JEFF_BASE_DIR . 'app/controller/async/photography/Samples.php';
+    $action = new Async_Photography_Samples();
+    break;
 
 
 case 'translation':
