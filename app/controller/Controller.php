@@ -15,7 +15,7 @@ class Controller
     const FEATURE_PHOTOS_PER_ROW   = 3;
 
 
-    //{{{ init(string)
+    //{{{ init(ParamManager)
     public function init($param_manager)
     {
         // Set params for this request
@@ -79,6 +79,14 @@ class Controller
         } else {
             header('Location: ' . $redirect_url);
         }
+    }
+    //}}}
+
+
+    //{{{ httpNotFound()
+    protected function httpNotFound()
+    {
+        header('HTTP/1.1 404 Not Found');
     }
     //}}}
 

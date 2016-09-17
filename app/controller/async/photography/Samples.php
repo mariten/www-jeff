@@ -11,6 +11,10 @@ class Async_Photography_Samples extends Controller
     public function loadParams()
     {
         $this->album_name = $this->request_params->getParam('album_name', null);
+        if(is_null($this->album_name)) {
+            // If invalid album name requested via async -- return 404
+            $this->httpNotFound();
+        }
     }
 
 
