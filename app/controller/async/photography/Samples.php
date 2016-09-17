@@ -15,6 +15,8 @@ class Async_Photography_Samples extends Controller
             // If invalid album name requested via async -- return 404
             $this->httpNotFound();
         }
+
+        parent::loadParams();
     }
 
 

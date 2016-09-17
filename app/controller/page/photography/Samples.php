@@ -14,6 +14,8 @@ class Page_Photography_Samples extends Controller
             // If invalid album name requested, re-direct to photography main page
             $this->doRedirect('/photography');
         }
+
+        parent::loadParams();
     }
 
 

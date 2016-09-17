@@ -48,6 +48,14 @@ class ParamManager
     //}}}
 
 
+    //{{{ getSanitizedParams()
+    public function getSanitizedParams()
+    {
+        return $this->sanitized_params;
+    }
+    //}}}
+
+
     //{{{ setParam(string, any)
     protected function setParam($param_key, $param_value)
     {

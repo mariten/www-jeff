@@ -45,8 +45,9 @@ class Controller
       */
     public function loadParams()
     {
-        // Parent function only returns empty array (no errors)
+        // Parent function only sets params and returns empty array (no errors)
         // Sub-class in individual controllers for request-specific logic
+        $this->assignLoadedParams();
         return array();
     }
     //}}}
@@ -66,6 +67,15 @@ class Controller
     {
         $personal_web_links = Registry_PersonalWebLinks::get();
         $this->smarty->assign('personal_web_links', $personal_web_links);
+    }
+    //}}}
+
+
+    //{{{ assignLoadedParams()
+    protected function assignLoadedParams()
+    {
+        $loaded_params = $this->request_params->getSanitizedParams();
+        $this->smarty->assign('params', $loaded_params);
     }
     //}}}
 
