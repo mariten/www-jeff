@@ -80,9 +80,9 @@
 function lazyload_home_flickr_pics()
 {
     $.ajax({
-        url:        "async/top?ts=" + Date.now(),
-        type:       "GET",
-        dataType:   "html",
+        url:        '/async/top?ts=' + Date.now(),
+        type:       'GET',
+        dataType:   'html',
         success: function(photos_html) {
             // Returns photo HTML as-is, simply "replace" the current <div> in DOM with the results of this API
             var div_for_results = $('<div />').append(photos_html);
