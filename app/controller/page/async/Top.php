@@ -10,7 +10,7 @@ class Page_Async_Top extends Controller
             'natural_japan',
         );
 
-        $sample_photos = $this->selectSinglePhotoPerAlbum($display_albums);
+        $sample_photos = $this->selectPhotosRandomlyFromAlbums($display_albums);
         if(!empty($sample_photos)) {
             $this->assignSamplePhotosInRows($sample_photos);
         }

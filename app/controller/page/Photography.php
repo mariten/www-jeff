@@ -13,7 +13,7 @@ class Page_Photography extends Controller
             'animals_in_japan',
         );
 
-        $sample_photos = $this->selectSinglePhotoPerAlbum($display_albums);
+        $sample_photos = $this->selectPhotosRandomlyFromAlbums($display_albums);
         if(!empty($sample_photos)) {
             $this->assignSamplePhotosInRows($sample_photos);
         }

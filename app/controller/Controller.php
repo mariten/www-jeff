@@ -6,7 +6,6 @@ require_once JEFF_BASE_DIR . 'app/model/Registry/PersonalWebLinks.php';
 
 // Flickr Photo Selection Includes
 require_once JEFF_BASE_DIR . 'app/model/Extraction/AlbumPhotoPicker.php';
-require_once JEFF_BASE_DIR . 'app/model/Registry/FlickrMariten.php';
 
 class Controller
 {
@@ -67,8 +66,8 @@ class Controller
     //}}}
 
 
-    //{{{ selectSinglePhotoPerAlbum(array)
-    protected function selectSinglePhotoPerAlbum($target_albums)
+    //{{{ selectPhotosRandomlyFromAlbums(array)
+    protected function selectPhotosRandomlyFromAlbums($target_albums)
     {
         $photo_picker = new Extraction_AlbumPhotoPicker();
         $api_success = $photo_picker->populatePhotosetLists($target_albums);
