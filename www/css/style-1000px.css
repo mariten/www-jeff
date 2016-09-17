@@ -79,6 +79,11 @@
         padding: 4em 0 4em 0;
     }
 
+    #small-wrapper
+    {
+        padding: 1em 0 1em 0;
+    }
+
     #footer-wrapper
     {
         padding: 4em 0 6em 0;
