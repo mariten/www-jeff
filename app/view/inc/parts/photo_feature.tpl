@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
 
-    {foreach from=$row_of_photos key=album_key item=picked_photo name=photo_loop}
+    {foreach from=$row_of_photos item=picked_photo name=photo_loop}
             <div class="4u">
                 <section class="box feature{if $smarty.foreach.photo_loop.last} last{/if}">
                     <a href="{$picked_photo.photo_url}" class="image featured"><img src="{$picked_photo.img_url}" alt="{$picked_photo.title}" /></a>

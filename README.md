@@ -38,4 +38,4 @@ The layers are constructed as follows:
 3. Point the **DocumentRoot** for Apache to the `www` folder - [index.php](www/index.php) in that folder handles all requests
 
 ## Credits
-* Thanks to @ajlkn for the great design skeletons at http://html5up.net
+* Thanks to [@ajlkn](https://github.com/ajlkn) for the great design skeletons at http://html5up.net

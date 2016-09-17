@@ -43,7 +43,7 @@
                 <p>The best of the best of my work, particularly from my earlier Japan days, are available for purchase on Getty</p>
 
 
-                <h3><a href="https://www.flickr.com/photos/mariten/">Flickr Photostream</a></h3>
+                <h3><a href="{$personal_web_links.flickr.url}">Flickr Photostream</a></h3>
                 <p>Consistently updated, though the photos I upload are perenially behind the present day.  For the time being, most of the photos are taken in Japan.</p>
 
             </section>
