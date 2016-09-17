@@ -2,16 +2,34 @@
 
 class Registry_NavbarLinks
 {
-    //{{{ getAsArray()
-    public static function getAsArray()
+    private static $NAVBAR_LINKS = array(
+        array(
+            'path'      => '/',
+            'display'   => 'About Me',
+        ),
+        array(
+            'path'      => '/development',
+            'display'   => 'Development',
+        ),
+        array(
+            'path'      => '/photography',
+            'display'   => 'Photography',
+        ),
+        array(
+            'path'      => '/translation',
+            'display'   => 'Translation',
+        ),
+        array(
+            'path'      => '/contact',
+            'display'   => 'Get in Touch',
+        ),
+    );
+
+
+    //{{{ get()
+    public static function get()
     {
-        return array(
-            '/'              => 'About Me',
-            '/development'   => 'Development',
-            '/photography'   => 'Photography',
-            '/translation'   => 'Translation',
-            '/contact'       => 'Get In Touch',
-        );
+        return self::$NAVBAR_LINKS;
     }
     //}}}
 }

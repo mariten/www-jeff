@@ -52,7 +52,7 @@ class Controller
     //{{{ assignNavbarLinks()
     protected function assignNavbarLinks()
     {
-        $navbar_links = Registry_NavbarLinks::getAsArray();
+        $navbar_links = Registry_NavbarLinks::get();
         $this->smarty->assign('navbar_links', $navbar_links);
     }
     //}}}
@@ -61,7 +61,7 @@ class Controller
     //{{{ assignPersonalWebLinks()
     protected function assignPersonalWebLinks()
     {
-        $personal_web_links = Registry_PersonalWebLinks::getAsArray();
+        $personal_web_links = Registry_PersonalWebLinks::get();
         $this->smarty->assign('personal_web_links', $personal_web_links);
     }
     //}}}
