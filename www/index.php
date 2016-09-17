@@ -68,10 +68,10 @@ default:
 }
 
 // Execute action
-$action->init($url_path);
-$error_messages = $action->checkParams($param_manager);
+$action->init($param_manager);
+$error_messages = $action->loadParams();
 if(empty($error_messages)) {
     $action->perform();
 } else {
-    echo('Error');
+    echo('Param Error');
 }
