@@ -66,6 +66,19 @@ class Controller
     //}}}
 
 
+    //{{{ doRedirect(string)
+    protected function doRedirect($redirect_url, $is_internal_redirect = true)
+    {
+        header('HTTP/1.1 301 Moved Permanently');
+        if($is_internal_redirect) {
+            header('Location: ' . JEFF_DOMAIN_CANONICAL . $redirect_url);
+        } else {
+            header('Location: ' . $redirect_url);
+        }
+    }
+    //}}}
+
+
     //{{{ selectPhotosRandomlyFromAlbums(array, int)
     protected function selectPhotosRandomlyFromAlbums($target_albums, $photos_per_album = 1)
     {
