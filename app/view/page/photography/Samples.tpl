@@ -16,7 +16,8 @@
 
             <section class="last">
 
-                <h2>Sample Photos</h2>
+                <h2>{$album_title}</h2>
+                <p>{$album_description}</p>
 
             </section>
 
