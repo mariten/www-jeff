@@ -15,6 +15,15 @@
 {foreach from=$navbar_links item=nav_link}
                 <li class="{if $nav_link.sub_menu}opener{/if} {if $nav_link.path == $request_path}current{/if}">
                     <a href="{$nav_link.path}">{$nav_link.display}</a>
+    {if $nav_link.sub_menu}
+                        <ul>
+        {foreach from=$nav_link.sub_menu item=sub_nav_link}
+                            <li>
+                                <a href="{$sub_nav_link.path}">{$sub_nav_link.display}</a>
+                            </li>
+        {/foreach}
+                        </ul>
+    {/if}
                 </li>
 {/foreach}
             </ul>
