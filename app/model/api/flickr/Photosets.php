@@ -1,5 +1,5 @@
 <?php
-require_once JEFF_BASE_DIR . 'app/model/API/Flickr.php';
+require_once JEFF_BASE_DIR . 'app/model/api/Flickr.php';
 
 class API_Flickr_Photosets extends API_Flickr
 {

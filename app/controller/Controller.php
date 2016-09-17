@@ -1,11 +1,11 @@
 <?php
 // Global Includes
 require_once SMARTY_DIR . 'Smarty.class.php';
-require_once JEFF_BASE_DIR . 'app/model/Registry/NavbarLinks.php';
-require_once JEFF_BASE_DIR . 'app/model/Registry/PersonalWebLinks.php';
+require_once JEFF_BASE_DIR . 'app/model/registry/NavbarLinks.php';
+require_once JEFF_BASE_DIR . 'app/model/registry/PersonalWebLinks.php';
 
 // Flickr Photo Selection Includes
-require_once JEFF_BASE_DIR . 'app/model/Extraction/AlbumPhotoPicker.php';
+require_once JEFF_BASE_DIR . 'app/model/extraction/AlbumPhotoPicker.php';
 
 class Controller
 {

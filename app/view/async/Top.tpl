@@ -1,1 +1,1 @@
-{include file='inc/parts/photo_feature.tpl'}
+{include file='inc/parts/PhotoFeature.tpl'}

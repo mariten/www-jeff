@@ -1,5 +1,5 @@
 <?php
-class Page_Async_Top extends Controller
+class Async_Top extends Controller
 {
     public function perform()
     {
@@ -15,6 +15,6 @@ class Page_Async_Top extends Controller
             $this->assignSamplePhotosInRows($sample_photos);
         }
 
-        $this->smarty->display('page/async/top.tpl');
+        $this->smarty->display('async/Top.tpl');
     }
 }

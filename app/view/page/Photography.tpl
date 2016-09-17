@@ -1,15 +1,15 @@
-{include file='inc/html/head.tpl'
+{include file='inc/html/Head.tpl'
     head_title_suffix   = 'Photography'
     head_description    = 'Samples of my work and a guide to where they can be found around the web'
 }
-{include file='inc/html/body.tpl' opening=true}
+{include file='inc/html/Body.tpl' opening=true}
 
 <!-- Header -->
-{include file='inc/parts/page_header.tpl'}
+{include file='inc/parts/PageHeader.tpl'}
 
 {if $sample_photos}
 <!-- Features -->
-    {include file='inc/parts/photo_feature.tpl'}
+    {include file='inc/parts/PhotoFeature.tpl'}
 {/if}
 
 <!-- Main -->
@@ -53,6 +53,6 @@
 </div>
 
 <!-- Footer -->
-{include file='inc/parts/page_footer.tpl'}
+{include file='inc/parts/PageFooter.tpl'}
 
-{include file='inc/html/body.tpl' closing=true}
+{include file='inc/html/Body.tpl' closing=true}

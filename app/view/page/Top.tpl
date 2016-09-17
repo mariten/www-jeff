@@ -1,10 +1,10 @@
-{include file='inc/html/head.tpl'
+{include file='inc/html/Head.tpl'
     head_description    = 'Personal Website for Jeff Case - Developer, Photographer, and Translator'
 }
-{include file='inc/html/body.tpl' opening=true}
+{include file='inc/html/Body.tpl' opening=true}
 
 <!-- Header -->
-{include file='inc/parts/page_header.tpl'}
+{include file='inc/parts/PageHeader.tpl'}
 
 <!-- Banner -->
 <div id="banner-wrapper">
@@ -67,11 +67,11 @@
 
 <!-- Photo Features Placeholder -->
 <div id="photos_for_home" style="margin-top:3em;">
-    {include file='inc/parts/photo_loader.tpl'}
+    {include file='inc/parts/PhotoLoader.tpl'}
 </div>
 
 <!-- Footer -->
-{include file='inc/parts/page_footer.tpl'}
+{include file='inc/parts/PageFooter.tpl'}
 
 
 <!-- JS for After OnLoad -->
@@ -98,4 +98,4 @@ window.onload_function_queue.push(lazyload_home_flickr_pics)
 </script>
 {/literal}
 
-{include file='inc/html/body.tpl' closing=true}
+{include file='inc/html/Body.tpl' closing=true}

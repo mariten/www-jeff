@@ -22,8 +22,8 @@ case 'top':
     $action = new Page_Top();
     break;
 case 'async/top':
-    require_once JEFF_BASE_DIR . 'app/controller/page/async/Top.php';
-    $action = new Page_Async_Top();
+    require_once JEFF_BASE_DIR . 'app/controller/async/Top.php';
+    $action = new Async_Top();
     break;
 
 

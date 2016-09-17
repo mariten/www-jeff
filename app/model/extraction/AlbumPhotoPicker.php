@@ -1,6 +1,6 @@
 <?php
-require_once JEFF_BASE_DIR . 'app/model/API/Flickr/Photosets.php';
-require_once JEFF_BASE_DIR . 'app/model/Registry/FlickrMariten.php';
+require_once JEFF_BASE_DIR . 'app/model/api/flickr/Photosets.php';
+require_once JEFF_BASE_DIR . 'app/model/registry/FlickrMariten.php';
 
 class Extraction_AlbumPhotoPicker
 {

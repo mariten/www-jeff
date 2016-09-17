@@ -3,6 +3,6 @@ class Page_Translation extends Controller
 {
     public function perform()
     {
-        $this->smarty->display('page/translation.tpl');
+        $this->smarty->display('page/Translation.tpl');
     }
 }

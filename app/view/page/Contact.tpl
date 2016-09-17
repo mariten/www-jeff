@@ -1,11 +1,11 @@
-{include file='inc/html/head.tpl'
+{include file='inc/html/Head.tpl'
     head_title          = 'Contact Jeff Case'
     head_description    = 'Get in touch with me today'
 }
-{include file='inc/html/body.tpl' opening=true}
+{include file='inc/html/Body.tpl' opening=true}
 
 <!-- Header -->
-{include file='inc/parts/page_header.tpl'}
+{include file='inc/parts/PageHeader.tpl'}
 
 <!-- Main -->
 <div id="main-wrapper">
@@ -47,6 +47,6 @@
 </div>
 
 <!-- Footer -->
-{include file='inc/parts/page_footer.tpl' hide_social_icons=true}
+{include file='inc/parts/PageFooter.tpl' hide_social_icons=true}
 
-{include file='inc/html/body.tpl' closing=true}
+{include file='inc/html/Body.tpl' closing=true}

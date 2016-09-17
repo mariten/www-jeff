@@ -18,6 +18,6 @@ class Page_Photography extends Controller
             $this->assignSamplePhotosInRows($sample_photos);
         }
 
-        $this->smarty->display('page/photography.tpl');
+        $this->smarty->display('page/Photography.tpl');
     }
 }

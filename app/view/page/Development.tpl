@@ -1,11 +1,11 @@
-{include file='inc/html/head.tpl'
+{include file='inc/html/Head.tpl'
     head_title_suffix   = 'Development'
     head_description    = 'Summary of my development history and personal projects'
 }
-{include file='inc/html/body.tpl' opening=true}
+{include file='inc/html/Body.tpl' opening=true}
 
 <!-- Header -->
-{include file='inc/parts/page_header.tpl'}
+{include file='inc/parts/PageHeader.tpl'}
 
 <!-- Main -->
 <div id="main-wrapper">
@@ -58,6 +58,6 @@
 </div>
 
 <!-- Footer -->
-{include file='inc/parts/page_footer.tpl'}
+{include file='inc/parts/PageFooter.tpl'}
 
-{include file='inc/html/body.tpl' closing=true}
+{include file='inc/html/Body.tpl' closing=true}
