@@ -25,12 +25,10 @@
     </div>
 </div>
 
-{if $sample_photos}
-<!-- Features -->
+<!-- Photo Samples Placeholder -->
 <div id="photos_for_samples" style="margin-top:3em;">
-    {include file='inc/parts/PhotoFeature.tpl'}
+{include file='inc/parts/PhotoLoader.tpl'}
 </div>
-{/if}
 
 <!-- Footer -->
 {include file='inc/parts/PageFooter.tpl'}

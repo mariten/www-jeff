@@ -3,9 +3,6 @@ require_once JEFF_BASE_DIR . 'app/model/registry/FlickrMariten.php';
 
 class Page_Photography_Samples extends Controller
 {
-    // Constants
-    const SAMPLE_SIZE = 6;
-
     // Request Params
     protected $album_name = null;
 
@@ -22,15 +19,10 @@ class Page_Photography_Samples extends Controller
 
     public function perform()
     {
-        $sample_photos = $this->selectPhotosRandomlyFromAlbums(array($this->album_name), self::SAMPLE_SIZE);
-        if(!empty($sample_photos)) {
-            // Include album metadata for display
-            $album_registry = Registry_FlickrMariten::getAlbums();
-            $this->smarty->assign('album_title', $album_registry[$this->album_name]['display']);
-            $this->smarty->assign('album_description', $album_registry[$this->album_name]['desc']);
-            $this->assignSamplePhotosInRows($sample_photos);
-        }
-
+        // Include album metadata for display
+        $album_registry = Registry_FlickrMariten::getAlbums();
+        $this->smarty->assign('album_title', $album_registry[$this->album_name]['display']);
+        $this->smarty->assign('album_description', $album_registry[$this->album_name]['desc']);
         $this->smarty->display('page/photography/Samples.tpl');
     }
 }
