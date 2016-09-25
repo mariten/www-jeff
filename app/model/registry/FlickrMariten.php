@@ -12,31 +12,37 @@ class Registry_FlickrMariten
         'olden_japan' => array(
             'id'        => '72157622463604941',
             'display'   => 'Olden Japan',
+            'desc'      => 'Showcasing the historical and traditional side of Japan'
         ),
 
         'modern_japan' => array(
             'id'        => '72157622588053932',
             'display'   => 'Modern Japan',
+            'desc'      => 'Showcasing the modern and futuristic side of Japan',
         ),
 
         'natural_japan' => array(
             'id'        => '72157622463615233',
             'display'   => 'Natural Japan',
+            'desc'      => 'Showcasing the natural beauty of the Japanese countryside',
         ),
 
         'japan_at_night' => array(
             'id'        => '72157625499254484',
             'display'   => 'Japan at Night',
+            'desc'      => 'Showcasing the beauty of night-time Japan, all lit up',
         ),
 
         'food_in_japan' => array(
             'id'        => '72157623460798501',
             'display'   => 'Food in Japan',
+            'desc'      => 'Showcasing the superb food available in Japan - both Japanese and international cuisine',
         ),
 
         'animals_in_japan' => array(
             'id'        => '72157644976488162',
             'display'   => 'Animals in Japan',
+            'desc'      => "Showcasing the creatures and critters I've met during my journeys around Japan",
         ),
     );
     //}}}

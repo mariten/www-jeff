@@ -116,6 +116,7 @@ class Extraction_AlbumPhotoPicker
             'date_taken'    => date('M d, Y', strtotime($photo_from_flickr['datetaken'])),
             'album_display' => $this->available_albums[$album_key]['display'],
             'album_url'     => $url_base . 'sets/' . $this->available_albums[$album_key]['id'] . '/',
+            'local_name'    => str_replace('_', '-', $album_key),
             'geo_url'       => '',
             'tag_url'       => '',
             'prefecture'    => '',

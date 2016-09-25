@@ -46,6 +46,13 @@
                 padding: 0.8em 0.9em;
             }
 
+            .button.small
+            {
+                margin-top: 0.3em;
+                font-size: 1.00em;
+                padding: 0.1em 0.6em;
+            }
+
             .button.icon
             {
             }
@@ -145,6 +152,11 @@
     #main-wrapper
     {
         padding: 5em 0 5em 0;
+    }
+
+    #small-wrapper
+    {
+        padding: 2em 0 2em 0;
     }
 
     #footer-wrapper

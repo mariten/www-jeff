@@ -13,6 +13,7 @@ class Async_Top extends Controller
         $sample_photos = $this->selectPhotosRandomlyFromAlbums($display_albums);
         if(!empty($sample_photos)) {
             $this->assignSamplePhotosInRows($sample_photos);
+            $this->smarty->assign('show_samples_button', true);
         }
 
         $this->smarty->display('async/Top.tpl');

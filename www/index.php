@@ -37,6 +37,19 @@ case 'photography':
     require_once JEFF_BASE_DIR . 'app/controller/page/Photography.php';
     $action = new Page_Photography();
     break;
+case 'photography/samples/olden-japan':
+case 'photography/samples/modern-japan':
+case 'photography/samples/natural-japan':
+case 'photography/samples/japan-at-night':
+case 'photography/samples/food-in-japan':
+case 'photography/samples/animals-in-japan':
+    require_once JEFF_BASE_DIR . 'app/controller/page/photography/Samples.php';
+    $action = new Page_Photography_Samples();
+    break;
+case 'async/photography/samples':
+    require_once JEFF_BASE_DIR . 'app/controller/async/photography/Samples.php';
+    $action = new Async_Photography_Samples();
+    break;
 
 
 case 'translation':

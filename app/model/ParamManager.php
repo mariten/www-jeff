@@ -1,4 +1,5 @@
 <?php
+require_once JEFF_BASE_DIR . 'app/model/registry/FlickrMariten.php';
 
 class ParamManager
 {
@@ -10,6 +11,7 @@ class ParamManager
 
     // Definitions for path params
     protected static $PATH_PARAM_RULES = array(
+        'album_name'        => 'photography\/samples\/([A-Za-z0-9_\- ]+)',
     );
 
 
@@ -46,6 +48,14 @@ class ParamManager
     //}}}
 
 
+    //{{{ getSanitizedParams()
+    public function getSanitizedParams()
+    {
+        return $this->sanitized_params;
+    }
+    //}}}
+
+
     //{{{ setParam(string, any)
     protected function setParam($param_key, $param_value)
     {
@@ -75,6 +85,17 @@ class ParamManager
                 $raw_value = substr($raw_value, 0, strlen($raw_value) - 1);
             }
             return $raw_value;
+        //}}}
+
+        //{{{ album_name
+        case 'album_name':
+            $possible_names = Registry_FlickrMariten::getAlbums();
+            $converted_value = str_replace('-', '_', $raw_value);
+            if(isset($possible_names[$converted_value])) {
+                return $converted_value;
+            } else {
+                return $fail_value;
+            }
         //}}}
 
         default:

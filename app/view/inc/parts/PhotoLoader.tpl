@@ -4,7 +4,7 @@
             <div class="12u">
                 <section class="box feature loader-bar">
                     <div class="gif-holder">
-                        <img src="images/flickr.gif" alt="Loading GIF" />
+                        <img src="/images/flickr.gif" alt="Loading GIF" />
                     </div>
                     <div class="inner">
                         <p>Loading Photos from Flickr...</p>
