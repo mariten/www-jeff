@@ -11,18 +11,19 @@
   * Utilizes [Skel](https://github.com/n33/skel) JS and [Font Awesome](http://fortawesome.github.io/Font-Awesome) for social button glyphs
 
 #### Photos via Flickr API
-Performs asynchronous HTTP (via CURL) queries at the Flickr API to pick a photo from specified Flickr albums
+Performs parallel HTTP (via CURL) queries at the Flickr API to select photos for display from my primary Flickr albums
 
 * Fetches metadata for a Flickr photoset and picks a single random photo from one or more target albums
 * Selected photos must meet certain conditions such as:
   * To ensure visual symmatery across the site, each photo must be a 4x3 landscape shot
   * Each photo must have been taken in a different state/prefecture as all of the other randomly selected photos
-  * If the photo is geotagged, show a link to a satellite map location of where it was shot
-* Perform queries to Flickr API asynchronously using the `curl_multi` wrapper
+  * If the photo is geotagged, include a link to a map showing the location where it was shot
+* Display photos asynchronously (via "lazy-load") to speed up the first-view of each page where these appear
+* Perform queries to Flickr API in parallel using the `curl_multi` wrapper
 * Cache raw results from Flickr API for 24 hours, as my Flickr photosets are not updated more than once a day
 
 #### Soft Rewrite Rules
-All processing of the URL path and subsequent rewrite rules are handled by the top-level [index.php](www/index.php), with just a [single Apache-side rewrite rule](www/.htaccess) which indiscriminately forwards the entire URL path string to PHP where parsing and path checks can be handled more programatically.
+All processing of the URL path and subsequent rewrite rules are handled by the top-level [index.php](www/index.php), with just a [single Apache-side rewrite rule](www/.htaccess).  This rule imply forwards the entire URL path and query string to PHP, where parsing and validation can be handled more programatically.
 
 #### Simple MVC
 Top-level controller handles all page requests and based on URL path (passed as `url_path`) decides which page controller to employ.
@@ -33,7 +34,9 @@ The layers are constructed as follows:
 * **View**: Actual Smarty template made up mostly of HTML, comprised of multiple reusable parts
 
 ## Setup
-1. Ensure `tmp/template_c` (where compiled Smarty templates go) is writable by the web server
+1. Ensure that temp file directories exist and are writable by the web server
+    * `tmp/template_c` - where compiled Smarty templates live
+    * `tmp/cache` - where API responses from `curl_multi` are cached as JSON
 2. For Flickr API calls, manually set the API key in the [Flickr config](config/secrets/flickr.php) file
 3. Point the **DocumentRoot** for Apache to the `www` folder - [index.php](www/index.php) in that folder handles all requests
 
