@@ -17,27 +17,27 @@ class Registry_NavbarLinks
             'sub_menu'  => array(
                 array(
                     'path'      => '/photography/samples/olden-japan',
-                    'display'   => 'Samples: Olden Japan',
+                    'display'   => 'Olden Japan',
                 ),
                 array(
                     'path'      => '/photography/samples/modern-japan',
-                    'display'   => 'Samples: Modern Japan',
+                    'display'   => 'Modern Japan',
                 ),
                 array(
                     'path'      => '/photography/samples/natural-japan',
-                    'display'   => 'Samples: Natural Japan',
+                    'display'   => 'Natural Japan',
                 ),
                 array(
                     'path'      => '/photography/samples/japan-at-night',
-                    'display'   => 'Samples: Japan at Night',
+                    'display'   => 'Japan at Night',
                 ),
                 array(
                     'path'      => '/photography/samples/food-in-japan',
-                    'display'   => 'Samples: Food in Japan',
+                    'display'   => 'Food in Japan',
                 ),
                 array(
                     'path'      => '/photography/samples/animals-in-japan',
-                    'display'   => 'Samples: Animals in Japan',
+                    'display'   => 'Animals in Japan',
                 ),
             ),
         ),
