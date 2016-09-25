@@ -46,6 +46,13 @@
                 padding: 0.8em 0.9em;
             }
 
+            .button.small
+            {
+                margin-top: 0.3em;
+                font-size: 1.00em;
+                padding: 0.1em 0.6em;
+            }
+
             .button.icon
             {
             }

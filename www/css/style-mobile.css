@@ -106,6 +106,12 @@
                     top: 0.05em;
                 }
 
+            .button.small
+            {
+                font-size: 1.00em;
+                padding: 0.4em 0.5em !important;
+            }
+
     /* Box */
 
         .box

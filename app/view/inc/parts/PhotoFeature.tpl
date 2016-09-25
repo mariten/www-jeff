@@ -11,6 +11,9 @@
                         <header>
                             <h2><a href="{$picked_photo.photo_url}" style="color:#444;">{$picked_photo.title}</a></h2>
                             <p>Sample from <b><a href="{$picked_photo.album_url}">{$picked_photo.album_display}</a></b></p>
+        {if $show_samples_button}
+                            <a class="button small icon fa-picture-o" href="/photography/samples/{$picked_photo.local_name}">More Samples from This Album</a>
+        {/if}
                         </header>
                         <p>
         {if $picked_photo.prefecture}
