@@ -17,7 +17,7 @@
                         </header>
                         <p>
         {if $picked_photo.prefecture}
-                            <a href="{$picked_photo.tag_url}">Taken in {$picked_photo.prefecture} Prefecture</a><br />
+                            Taken in <a href="{$picked_photo.tag_url}">{$picked_photo.prefecture} Prefecture</a><br />
         {/if}
                             on {$picked_photo.date_taken}
         {if $picked_photo.geo_url}
