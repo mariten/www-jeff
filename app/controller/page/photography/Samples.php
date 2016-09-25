@@ -25,6 +25,7 @@ class Page_Photography_Samples extends Controller
         $album_registry = Registry_FlickrMariten::getAlbums();
         $this->smarty->assign('album_title', $album_registry[$this->album_name]['display']);
         $this->smarty->assign('album_description', $album_registry[$this->album_name]['desc']);
+        $this->smarty->assign('album_url', Registry_FlickrMariten::BASE_URL . 'sets/' . $album_registry[$this->album_name]['id']);
         $this->smarty->display('page/photography/Samples.tpl');
     }
 }

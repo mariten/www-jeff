@@ -16,7 +16,7 @@
 
             <section class="last">
 
-                <h2>{$album_title}</h2>
+                <h2><a href="{$album_url}">{$album_title}</a></h2>
                 <p>{$album_description}</p>
 
             </section>
