@@ -93,10 +93,31 @@ class Controller
     //}}}
 
 
-    //{{{ httpNotFound()
-    protected function httpNotFound()
+    //{{{ httpBadRequest(boolean)
+    public function httpBadRequest($show_error_page = true)
+    {
+        header('HTTP/1.1 400 Bad Request');
+        if($show_error_page) {
+            $this->smarty->display('error/BadRequest.tpl');
+        }
+    }
+    //}}}
+    //{{{ httpNotFound(boolean)
+    public function httpNotFound($show_error_page = true)
     {
         header('HTTP/1.1 404 Not Found');
+        if($show_error_page) {
+            $this->smarty->display('error/NotFound.tpl');
+        }
+    }
+    //}}}
+    //{{{ httpInternalServerError(boolean)
+    public function httpInternalServerError($show_error_page = true)
+    {
+        header('HTTP/1.1 500 Internal Server Error');
+        if($show_error_page) {
+            $this->smarty->display('error/InternalServerError.tpl');
+        }
     }
     //}}}
 

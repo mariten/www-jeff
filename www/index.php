@@ -16,15 +16,24 @@ $url_path = $param_manager->getParam('url_path', '');
 // Determine which action to instantiate
 $action = getMatchingController($url_path);
 if(is_null($action)) {
-    echo('404');
-    exit;
+    // No matching action - HTTP 404
+    require_once JEFF_BASE_DIR . 'app/controller/error/NotFound.php';
+    $action = new Error_NotFound();
 }
 
 // Check input params based on action
 $action->init($param_manager);
 $error_messages = $action->loadParams();
-if(empty($error_messages)) {
+if(!empty($error_messages)) {
+    // Param error - HTTP 400
+    $action->httpBadRequest();
+}
+
+// Execute action
+try {
     $action->perform();
-} else {
-    echo('Param Error');
+}
+catch (Exception $ex) {
+    // Unanticipated exception - HTTP 500
+    $action->httpInternalServerError();
 }
