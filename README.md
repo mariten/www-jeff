@@ -23,7 +23,7 @@ Performs parallel HTTP (via CURL) queries at the Flickr API to select photos for
 * Cache raw results from Flickr API for 24 hours, as my Flickr photosets are not updated more than once a day
 
 #### Soft Rewrite Rules
-All processing of the URL path and subsequent rewrite rules are handled by the top-level [index.php](www/index.php), with just a [single Apache-side rewrite rule](www/.htaccess).  This rule imply forwards the entire URL path and query string to PHP, where parsing and validation can be handled more programatically.
+All processing of the URL path and subsequent rewrite rules are handled by the top-level [index.php](www/index.php), with just a [few Apache-side rewrite rules](www/.htaccess).  This rule imply forwards the entire URL path and query string to PHP, where parsing and validation can be handled more programatically.
 
 #### Simple MVC
 Top-level controller handles all page requests and based on URL path (passed as `url_path`) decides which page controller to employ.
