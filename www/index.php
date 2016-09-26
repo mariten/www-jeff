@@ -24,8 +24,10 @@ if(is_null($action)) {
 // Check input params based on action
 $action->init($param_manager);
 $error_messages = $action->loadParams();
-if(empty($error_messages)) {
-    $action->perform();
-} else {
-    echo('Param Error');
+if(!empty($error_messages)) {
+    // Param error - HTTP 400
+    $action->httpBadRequest();
 }
+
+// Execute action
+$action->perform();

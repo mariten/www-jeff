@@ -93,6 +93,15 @@ class Controller
     //}}}
 
 
+    //{{{ httpBadRequest(boolean)
+    public function httpBadRequest($show_error_page = true)
+    {
+        header('HTTP/1.1 400 Bad Request');
+        if($show_error_page) {
+            $this->smarty->display('error/BadRequest.tpl');
+        }
+    }
+    //}}}
     //{{{ httpNotFound(boolean)
     public function httpNotFound($show_error_page = true)
     {
