@@ -111,6 +111,15 @@ class Controller
         }
     }
     //}}}
+    //{{{ httpInternalServerError(boolean)
+    public function httpInternalServerError($show_error_page = true)
+    {
+        header('HTTP/1.1 500 Internal Server Error');
+        if($show_error_page) {
+            $this->smarty->display('error/InternalServerError.tpl');
+        }
+    }
+    //}}}
 
 
     //{{{ selectPhotosRandomlyFromAlbums(array, int)

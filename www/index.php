@@ -30,4 +30,10 @@ if(!empty($error_messages)) {
 }
 
 // Execute action
-$action->perform();
+try {
+    $action->perform();
+}
+catch (Exception $ex) {
+    // Unanticipated exception - HTTP 500
+    $action->httpInternalServerError();
+}
