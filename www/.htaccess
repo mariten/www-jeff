@@ -1,4 +1,9 @@
 DirectoryIndex index.php index.html
 
 RewriteEngine On
+
+# Catch index (no URL path at all)
+RewriteRule ^$ index.php?url_path= [L]
+
+# Catch URLs with expected chars, pass entire path as "url_path" variable
 RewriteRule ^([a-zA-Z0-9]+)([/a-zA-Z0-9\-]*)?$ index.php?url_path=$1$2 [QSA,L]
