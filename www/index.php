@@ -16,8 +16,9 @@ $url_path = $param_manager->getParam('url_path', '');
 // Determine which action to instantiate
 $action = getMatchingController($url_path);
 if(is_null($action)) {
-    echo('404');
-    exit;
+    // No matching action - HTTP 404
+    require_once JEFF_BASE_DIR . 'app/controller/error/NotFound.php';
+    $action = new Error_NotFound();
 }
 
 // Check input params based on action

@@ -93,10 +93,13 @@ class Controller
     //}}}
 
 
-    //{{{ httpNotFound()
-    protected function httpNotFound()
+    //{{{ httpNotFound(boolean)
+    public function httpNotFound($show_error_page = true)
     {
         header('HTTP/1.1 404 Not Found');
+        if($show_error_page) {
+            $this->smarty->display('error/NotFound.tpl');
+        }
     }
     //}}}
 
