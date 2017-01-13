@@ -12,7 +12,7 @@
         <div class="row">
             <div class="7u">
                 <h2>Jeff Case</h2>
-                <p>Developer, photographer, creator, tinkerer, translator, explorer, computer geek</p>
+                <p>Developer; photographer; creator; tinkerer; translator; explorer; computer geek</p>
             </div>
             <div class="5u">
                 <ul>
